@@ -1,0 +1,8 @@
+app-header-menu-mobile {
+    display: none;
+  
+    @media (max-width: 1180px) {
+      display: block;
+    }
+  }
+  

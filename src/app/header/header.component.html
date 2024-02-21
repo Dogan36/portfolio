@@ -1,1 +1,21 @@
-<p>header works!</p>
+<header #header>
+
+  <img src="./../../assets/logo-black.svg" alt="Logo" class="logo">
+  <div class="headerRight">
+    <a (click)="scrollTo('aboutMe')" [ngClass]="{ 'active': activeSection === 'aboutMe' }" translate>1
+    </a>
+    <a (click)="scrollTo('skills')" [ngClass]="{ 'active': activeSection === 'skills' }">Skills</a>
+    <a (click)="scrollTo('portfolio')" [ngClass]="{ 'active': activeSection === 'portfolio' }" translate>Portfolio</a>
+
+    <!-- Weitere Links hinzufügen -->
+    <ng-container *ngFor="let language of languageList">
+     
+        <a *ngIf="currentLanguage !== language.code"
+        (click)="changeSiteLanguage(language.code)">
+        <img [src]="language.imageSrc" alt="{{ language.label }}" />
+        </a>
+     
+    </ng-container>
+  </div>
+
+</header>

@@ -1,0 +1,50 @@
+@import './../../styles.scss';
+
+header {
+    position: sticky;
+    top: 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    background-color: $backgroundcolor;
+
+    img {
+        height: 80px;
+        cursor: pointer;
+    }
+}
+
+.headerRight {
+    display: flex;
+    align-items: center;
+    gap: 29px;
+  
+    a {
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 23px;
+      color: #fff;
+      position: relative;
+  
+      &:hover {
+        color: $purple;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0; // Startet mit einer Breite von 0
+        height: 2px;
+        background-color: $purple;
+        transition: width 0.2s ease-in; // Übergang für die Breite des Unterstrichs
+      }
+      &.active {
+        &:after {
+            width: 53px; // Setzt die Breite des Unterstrichs auf 100% bei aktiver Klasse
+          }
+       
+    }
+  }}

@@ -2,6 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 import { NgxTranslateModule } from './../translate/translate.module'
+import { LanguagesService } from '../languages.service';
 
 @Component({
   selector: 'app-header',
@@ -12,31 +13,11 @@ import { NgxTranslateModule } from './../translate/translate.module'
 })
 export class HeaderComponent {
 
-  siteLanguage = 'English';
-  
-  languageList = [
-    { code: 'en', label: 'English', imageSrc: '/assets/gbFlag.png' },
-    { code: 'de', label: 'Deutsch', imageSrc: '/assets/gerFlag.png' },
-    // Weitere Sprachen hinzufügen...
-  ];
-  
   activeSection!: string;
 
   sections: string[] = ['startingPage', 'reference', 'aboutMe', 'skills', 'portfolio']
-currentLanguage:string= "en";
-
-  constructor(private translate: TranslateService) { }
-  changeSiteLanguage(localeCode: string): void {
-    const selectedLanguage = this.languageList
-      .find((language) => language.code === localeCode)
-      ?.label.toString();
-    if (selectedLanguage) {
-      this.siteLanguage = selectedLanguage;
-      this.translate.use(localeCode);
-    }
-    this.currentLanguage = this.translate.currentLang;
-    console.log('currentLanguage', this.currentLanguage);
-  }
+  
+constructor(public languages: LanguagesService) {}
 
   scrollTo(section: string): void {
     const element = document.getElementById(section);

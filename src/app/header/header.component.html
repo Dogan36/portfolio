@@ -4,18 +4,35 @@
   <div class="headerRight">
     <a (click)="scrollTo('aboutMe')" [ngClass]="{ 'active': activeSection === 'aboutMe' }" translate>1
     </a>
-    <a (click)="scrollTo('skills')" [ngClass]="{ 'active': activeSection === 'skills' }">Skills</a>
+    <a (click)="scrollTo('skills')" [ngClass]="{ 'active': activeSection === 'skills' }" translate>17</a>
     <a (click)="scrollTo('portfolio')" [ngClass]="{ 'active': activeSection === 'portfolio' }" translate>Portfolio</a>
 
+    <div (click)="toggleBurger()" class="burgerMenu" [ngClass]="{'active': burgerMenuOpen === true}">
+      <b></b>
+      <b></b>
+      <b></b>
+    </div>
+
+
     <!-- Weitere Links hinzufügen -->
-    <ng-container *ngFor="let language of languageList">
-     
-        <a *ngIf="currentLanguage !== language.code"
-        (click)="changeSiteLanguage(language.code)">
+    <ng-container *ngFor="let language of languagesService.languageList">
+
+      <div *ngIf="languagesService.currentLanguage !== language.code"
+        (click)="languagesService.changeSiteLanguage(language.code)">
         <img [src]="language.imageSrc" alt="{{ language.label }}" />
-        </a>
-     
+      </div>
+
     </ng-container>
+  </div>
+
+  <div class="headerMobile" [ngClass]="{'active': burgerMenuOpen === true}">
+    <div class="headerMobileContent">
+      <a (click)="scrollTo('aboutMe'); toggleBurgerWithDelay()" [ngClass]="{ 'active': activeSection === 'aboutMe' }" translate>1</a>
+      <a (click)="scrollTo('skills'); toggleBurgerWithDelay()" [ngClass]="{ 'active': activeSection === 'skills' }" translate>17</a>
+      <a (click)="scrollTo('portfolio'); toggleBurgerWithDelay()" [ngClass]="{ 'active': activeSection === 'portfolio' }" translate>Portfolio</a>
+      <a (click)="scrollTo('contact'); toggleBurgerWithDelay()" [ngClass]="{ 'active': activeSection === 'contact' }" translate>8</a>
+    </div>
+
   </div>
 
 </header>

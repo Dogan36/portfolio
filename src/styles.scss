@@ -1,48 +1,73 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  $backgroundcolor: #141D2F;
-  $darkBlue: #141D2FCC;
-  $purple:#9747FF;
-  $lightblue:#1CDAE6;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+$backgroundcolor: #141D2F;
+$darkBlue: #141D2FCC;
+$purple: #9747FF;
+$lightblue: #00BEE8;
+$blue: #4B47FF;
 
 
+html {
+  scroll-behavior: smooth;
+ // scroll-snap-type: y mandatory;
+}
 
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: $backgroundcolor;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
 
-  html {
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-  }
-  
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: $backgroundcolor;
-    overflow-x: hidden;
-    overflow-y: scroll;
+.bodyNoScroll {
+  overflow: hidden;
+}
+
+.content {
+  width: clamp(200px, 100vw, 1600px);
+  padding: 100px 5vw 0;
  
-  }
-  
+}
 
- section{
+section {
   scroll-snap-align: start;
- }
 
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #141D2F;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #3637B4;
-    border-radius: 4px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #6161d1;
-  }
+}
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #141D2F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3637B4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6161d1;
+}
+app-header{
+  display: block;
+  position: relative;
+  height: 0px;
+
+}
+
+app-starting-page{
+  position: relative;
+}
+
+h1{
+  font-size: clamp(45px, 5.625vw, 90px);
+  font-weight: 700;
+  color: white;
+}

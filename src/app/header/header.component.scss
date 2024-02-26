@@ -1,50 +1,175 @@
 @import './../../styles.scss';
 
-header {
-    position: sticky;
-    top: 0;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5%;
-    background-color: $backgroundcolor;
+$headerHeight: 100px;
 
-    img {
-        height: 80px;
-        cursor: pointer;
-    }
+header {
+  width: clamp(200px, 100vw, 1600px);
+  position: fixed;
+  top: 0;
+  height: $headerHeight;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  background-color: $backgroundcolor;
+
+  z-index: 999;
+
+  img:first-child {
+    height: 80px;
+    cursor: pointer;
+  }
+
+  img:last-child {
+    height: 45px;
+    cursor: pointer;
+  }
 }
 
 .headerRight {
-    display: flex;
-    align-items: center;
-    gap: 29px;
-  
-    a {
-      text-decoration: none;
-      font-weight: 400;
-      font-size: 23px;
-      color: #fff;
-      position: relative;
-  
-      &:hover {
-        color: $purple;
-      }
-      &:after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -2px;
-        width: 0; // Startet mit einer Breite von 0
-        height: 2px;
-        background-color: $purple;
-        transition: width 0.2s ease-in; // Übergang für die Breite des Unterstrichs
-      }
-      &.active {
-        &:after {
-            width: 53px; // Setzt die Breite des Unterstrichs auf 100% bei aktiver Klasse
-          }
-       
+  display: flex;
+  align-items: center;
+  gap: 29px;
+  a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 23px;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    @media (max-width:700px) {
+      display: none;
     }
-  }}
+    &:hover {
+      color: $purple;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0; // Startet mit einer Breite von 0
+      height: 2px;
+      background-color: $purple;
+      transition: width 0.2s ease-in; // Übergang für die Breite des Unterstrichs
+    }
+    &.active {
+      &:after {
+        width: 53px; // Setzt die Breite des Unterstrichs auf 100% bei aktiver Klasse
+      }
+    }
+  }
+}
+
+.headerMobileContent {
+  height: 215px;
+  width: 114px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  a {
+    cursor: pointer;
+    color: white;
+    font-size: 23px;
+    position: relative;
+    &:hover {
+      color: $purple;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0; // Startet mit einer Breite von 0
+      height: 2px;
+      background-color: $purple;
+      transition: width 0.2s ease-in; // Übergang für die Breite des Unterstrichs
+    }
+
+    &.active {
+      &:after {
+        width: 53px; // Setzt die Breite des Unterstrichs auf 100% bei aktiver Klasse
+      }
+    }
+  }
+
+}
+
+.burgerMenu {
+  display: none;
+  position: relative;
+  margin-top: -(9px);
+  width: 41px;
+  height: 28px;
+  cursor: pointer;
+
+  @media (max-width:700px) {
+    display: block;
+  }
+
+  b {
+    position: absolute;
+    left: 0;
+    width: 41px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.125s;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+    }
+
+    &:nth-child(3) {
+      top: 100%;
+    }
+  }
+
+  &.active b {
+
+    /* Animate zum X-Symbol, indem du die Transform-Eigenschaft änderst */
+    &:nth-child(1) {
+      transform: rotate(45deg) translate(9px, 10px);
+    }
+
+    &:nth-child(2) {
+      width: 0;
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-45deg) translate(10px, -11px);
+    }
+  }
+}
+
+
+.headerMobile {
+  position: absolute;
+  overflow: hidden;
+  width: 0vw;
+  height: calc(100vh - $headerHeight);
+  background: white;
+  top: $headerHeight;
+  right: 0;
+  transition: all 0.125s ease-in-out;
+  background-color: $darkBlue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.active {
+    width: 100vw;
+
+  }
+
+}
+
+.bodyNoScroll {
+  overflow: hidden;
+}
+

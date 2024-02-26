@@ -1,9 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateService } from '@ngx-translate/core';
-import { NgxTranslateModule } from './../translate/translate.module'
 import { LanguagesService } from '../languages.service';
-
+import { NgxTranslateModule } from '../translate/translate.module';
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -13,11 +11,15 @@ import { LanguagesService } from '../languages.service';
 })
 export class HeaderComponent {
 
+
   activeSection!: string;
 
   sections: string[] = ['startingPage', 'reference', 'aboutMe', 'skills', 'portfolio']
-  
-constructor(public languages: LanguagesService) {}
+
+  burgerMenuOpen: boolean = false
+
+  constructor(public languagesService: LanguagesService) { }
+
 
   scrollTo(section: string): void {
     const element = document.getElementById(section);
@@ -41,6 +43,19 @@ constructor(public languages: LanguagesService) {}
     }
   }
 
+  toggleBurger() {
+    this.burgerMenuOpen = !this.burgerMenuOpen;
+    const body = document.body;
+    if (this.burgerMenuOpen) {
+      body.classList.add('bodyNoScroll');
+    } else {
+      body.classList.remove('bodyNoScroll');
+    }
+  }
+
+  toggleBurgerWithDelay(){
+    setTimeout(() => this.toggleBurger(), 500);
+  }
 
 }
 

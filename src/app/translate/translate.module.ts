@@ -7,7 +7,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-
+import { LanguagesService } from '../languages.service';
 export function HttpLoaderFactory(http: HttpClient) {
 
   return new TranslateHttpLoader(http,
@@ -21,10 +21,12 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
 
   declarations: [],
-
+  
   imports: [
 
     CommonModule,
+
+  
 
     HttpClientModule,
 
@@ -47,7 +49,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
 
   exports: [TranslateModule],
-
+  providers: [LanguagesService],
 })
 
 export class NgxTranslateModule { }

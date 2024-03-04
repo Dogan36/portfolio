@@ -1,4 +1,57 @@
 @import './../../styles.scss';
-.portfolio{
-    height: 500px;
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  gap:35px
 }
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(200px, 100vw, 1600px);
+    gap: 1.56vw;
+    margin-top: 20px;
+
+    
+
+    h1 {
+
+        text-align: center;
+    }
+
+    div {
+        display: flex;
+        flex-grow: 1;
+
+        
+
+        &:first-child {
+            justify-content: end;
+
+            
+        }
+           
+
+            span {
+                border-bottom: 4px solid $blue;
+                border-color: $blue;
+            }
+
+            &:first-child span {
+                align-self: flex-end;
+                width: clamp(20px, 10%, 109px);
+
+            }
+
+            &:last-child span {
+                width: calc(100% + 5vw)
+            }
+        }
+
+
+    }

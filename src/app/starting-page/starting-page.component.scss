@@ -3,14 +3,14 @@
 .startingPage {
     height: clamp(600px, 100vh, 3000px);
     overflow: hidden;
-position: relative;
+    position: relative;
+    padding-bottom: 0
 }
 
 .sectionContent {
     display: flex;
     flex-direction: column;
     height: 100%;
-
 }
 
 .mainContent {
@@ -99,7 +99,7 @@ position: relative;
 }
 
 .iAmLeft {
-    font-size: clamp(32px, 4.5vw, 77px);
+    font-size: clamp(29px, 4.5vw, 77px);
     color: white;
     writing-mode: vertical-rl;
     rotate: 180deg;
@@ -108,17 +108,18 @@ position: relative;
 }
 
 .iAmLeftDE {
-    font-size: clamp(20px, 2.9375vw, 47px);
+    font-size: clamp(19px, 2.9375vw, 47px);
 }
 
 .iAmRight {
     display: flex;
     flex-direction: column;
     white-space: nowrap;
+   
 
 
     span:nth-child(2) {
-        font-size: clamp(20px, 3.625vw, 58px);
+        font-size: clamp(18px, 3.625vw, 58px);
         color: $purple
     }
 }
@@ -155,50 +156,98 @@ position: relative;
     }
 }
 
+
+
+.sectionBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 10px;
+    z-index: 7;
+    height: 30px;
+}
+
+
 .reference {
-    margin-bottom: 50px;
+
     margin-left: -5vw;
-    z-index: 3;
+
     display: flex;
     align-items: center;
-gap: 25px;
+    gap: 25px;
 
-a{
-    text-decoration: none;
-    cursor: pointer;
-    font-size:clamp(20px, 2vw, 28px);
-    color: white;
-    @media (max-width:600px) {
-        display: none;
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        font-size: clamp(20px, 2vw, 28px);
+        color: white;
+
+        @media (max-width:600px) {
+            display: none;
+        }
     }
-}
 
 
 }
 
-.line{
+.line {
 
     border-bottom: 4px solid $blue;
     border-color: $blue;
-    width: 100px;
-  
+    width: clamp(64px, 6.25vw, 100px);
+
 }
 
-.icons{
+.icons {
     display: flex;
-    gap:25px;
-    a{
+    gap: 25px;
+
+    a {
         height: 40px;
         width: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    img{
+
+    img {
         height: 30px;
         transition: all 125ms;
-        &:hover{
+
+        &:hover {
             height: 40px;
         }
+    }
+}
+
+.scrollDown {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+@media (max-width:1000px) {
+    display: none;
+}
+    &:hover {
+        transform: scale(1.1);
+    }
+
+
+
+    span {
+        color: white;
+        font-size: 23px;
+        writing-mode: vertical-lr;
+        text-align: center;
+
+
+    }
+
+    img{
+        content: url(./../../assets/img/startingPage/arrowDown.svg);
+        margin-left: -2px;
+        width: 18px;
     }
 }

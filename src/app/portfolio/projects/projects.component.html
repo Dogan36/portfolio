@@ -1,0 +1,27 @@
+<div class="projects">
+    <div class="project" *ngFor="let project of projects">
+        <div class="projectLeft">
+            <div class="projectImg">
+                <img src="./../../../assets/img/portfolio/emptyPC.png" alt="">
+                <img src="./../../../assets/img/portfolio/{{project.imgname}}.png">
+                <img src="./../../../assets/img/portfolio/{{project.imgname}}.gif">
+            </div>
+        </div>
+        <div class="projectRight">
+            <div class="projectInfo">
+                <span class="projectName">{{project.name}}</span>
+                <div class="projectStack">
+                    <span *ngFor="let skill of project.stack; let last = last">
+                        {{ skill }}
+                        <span *ngIf="!last">&nbsp;|&nbsp;</span>
+                    </span>
+                </div>
+                <span class="projectDecription">{{project.description}}</span>
+            </div>
+            <div class="projectButtons">
+                <a href="{{project.link}}">Live Test</a>
+                <a href="{{project.githublink}}">Github</a>
+            </div>
+        </div>
+    </div>
+</div>

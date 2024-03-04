@@ -5,7 +5,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ReferenceIconsComponent } from './reference-icons/reference-icons.component';
+
 import { SkillsComponent } from './skills/skills.component';
 import { StartingPageComponent } from './starting-page/starting-page.component';
 import { NgxTranslateModule } from './translate/translate.module';
@@ -16,7 +16,7 @@ import { NgxTranslateModule } from './translate/translate.module';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, AboutMeComponent, ContactComponent, FooterComponent, HeaderComponent, PortfolioComponent, ReferenceIconsComponent, SkillsComponent, StartingPageComponent, NgxTranslateModule],
+  imports: [RouterOutlet, AboutMeComponent, ContactComponent, FooterComponent, HeaderComponent, PortfolioComponent, SkillsComponent, StartingPageComponent, NgxTranslateModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

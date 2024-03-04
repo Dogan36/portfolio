@@ -14,6 +14,7 @@ $blue: #4B47FF;
 html {
   scroll-behavior: smooth;
  scroll-snap-type: y mandatory;
+
 }
 
 body {
@@ -22,6 +23,7 @@ body {
   background-color: $backgroundcolor;
   overflow-x: hidden;
   overflow-y: scroll;
+  gap: 500px;
 }
 
 .bodyNoScroll {
@@ -30,13 +32,12 @@ body {
 
 .content {
   width: clamp(200px, 100vw, 1600px);
-  padding: 100px 5vw 0;
- 
+  padding: 100px 5vw
 }
 
 section {
   scroll-snap-align: start;
-
+  
 }
 
 ::-webkit-scrollbar {
@@ -67,7 +68,7 @@ app-starting-page{
 }
 
 h1{
-  font-size: clamp(45px, 5.625vw, 90px);
+  font-size: clamp(40px, 5.625vw, 90px);
   font-weight: 700;
   color: white;
 }

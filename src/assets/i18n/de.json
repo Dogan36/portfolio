@@ -24,10 +24,13 @@
 	"Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.": "Spring-, Lauf- und Wurfspiel auf objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.",
 	"Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.": "Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
 	"Based on the PokeAPI a simple library that provides and catalogues pokemon information.": "Basierend auf der PokeAPI eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
-	"testtesttest": "testtesttestDeutsch",
+	"An online card drinking game for entertaining hours with friends. Developed with Firebase for seamless interactions.": "Ein Online-Kartentrinkspiel für unterhaltsame Stunden mit Freunden. Entwickelt mit Firebase für reibungslose Interaktionen.",
 	"A very Simple Customer Relationship Management system working with CRUD functionality.": "Ein sehr einfaches Customer-Relationship-Management-System, das mit CRUD-Funktionalität arbeitet.",
 	"scroll down": "scrolle nach unten",
 	"My Skills": "Meine Fähigkeiten",
 	"I have gained experience in building projects with various front end technologies and concepts.": "Ich habe Erfahrung im Bau von Projekten mit verschiedenen Frontend-Technologien und Konzepten gesammelt.",
-	"Get in touch": "Komm in Kontakt"
+	"Get in touch": "Komm in Kontakt",
+	"I've read the": "Ich habe die ",
+	"privacy policy": "Datenschuterklärung ",
+	"and I agree to the processing of my data as outlined.": "gelesen und bin mit der Verarbeitung meiner Daten wie beschrieben einverstanden."
 }

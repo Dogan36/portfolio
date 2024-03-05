@@ -35,7 +35,6 @@ onScrollEnd(event: any): void {
       // Überprüfen, ob die Mitte der Sektion im sichtbaren Bereich ist
       if (rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2) {
         this.activeSection = section;
-        console.log('active ' + this.activeSection)
       }
     }
   }

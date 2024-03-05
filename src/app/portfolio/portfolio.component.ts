@@ -6,7 +6,7 @@ import { NgxTranslateModule } from './../translate/translate.module'
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [NgxTranslateModule, ProjectsComponent],
+  imports: [NgxTranslateModule, ProjectsComponent,],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })

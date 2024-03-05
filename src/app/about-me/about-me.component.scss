@@ -92,8 +92,13 @@
     position: absolute;
     z-index: 3;
     top: -300px;
-    right: -78px;
+    right: 0px;
     width: 352px;
     height: 100%;
     overflow: hidden;
+
+    img{
+        position: absolute;
+        left:30px
+    }
 }

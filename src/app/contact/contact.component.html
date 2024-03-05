@@ -1,1 +1,88 @@
-<section id="contact" class="contact content">Contact</section>
+<section id="contact" class="contact content">
+
+    <div class="sectionHeader">
+        <span></span>
+        <h1 translate>Contact</h1>
+    </div>
+    <div class="contactContent">
+        <div class="contactLeft">
+
+            <h2 translate>Got a problem to solve?</h2>
+            <p translate>Contact me through this form, I am interested in hearing you, knowing your ideas and
+                contributing to your projects with my work.</p>
+            <div><span translate>Need a Frontend developer? </span> <span translate>Contact me!</span></div>
+
+
+        </div>
+        <form class="form" [formGroup]="myForm" (ngSubmit)="onSubmit(); false">
+            <div class="formField">
+                <div class="input-container">
+                  <input formControlName="name" placeholder="Your name" required
+                    [ngClass]="{
+                      'borderRed': myForm.get('name')?.touched && nameError,
+                      'borderGreen': myForm.get('name')?.valid && myForm.get('name')?.touched && !nameError
+                    }">
+                  <img *ngIf="myForm.get('name')?.touched && myForm.get('name')?.invalid"
+                    class="status-img" src="./../../assets/img/contact/error.png" alt="Error">
+                  <img *ngIf="myForm.get('name')?.valid && myForm.get('name')?.touched && !nameError"
+                    class="status-img" src="./../../assets/img/contact/done.png" alt="Checked">
+                </div>
+                <span class="error-message" *ngIf="myForm.get('name')?.touched && nameError">{{ nameError }}</span>
+              </div>
+
+
+            <div class="formField">
+                <div class="input-container">
+                    <input formControlName="email" placeholder="Your email" required [ngClass]="{
+                    'borderRed': myForm.get('email')?.touched && emailError,
+                    'borderGreen': myForm.get('email')?.valid && myForm.get('email')?.touched
+                  }">
+                    <img *ngIf="myForm.get('email')?.touched && myForm.get('email')?.invalid" class="status-img"
+                        src="./../../assets/img/contact/error.png" alt="Error">
+                    <img *ngIf="myForm.get('email')?.valid && myForm.get('email')?.touched" class="status-img"
+                        src="./../../assets/img/contact/done.png" alt="Checked">
+                </div>
+                <span class="error-message" *ngIf="myForm.get('email')?.touched && emailError">{{ emailError }}</span>
+            </div>
+
+            <div class="formField">
+                <div class="input-container">
+                    <textarea formControlName="message" placeholder="Your message" required [ngClass]="{
+                    'borderRed': myForm.get('message')?.touched && messageError,
+                    'borderGreen': myForm.get('message')?.valid && myForm.get('message')?.touched
+                  }"></textarea>
+
+                    <img *ngIf="myForm.get('message')?.touched && myForm.get('message')?.invalid" class="status-img"
+                        src="./../../assets/img/contact/error.png" alt="Error">
+
+                    <img *ngIf="myForm.get('message')?.valid && myForm.get('message')?.touched" class="status-img"
+                        src="./../../assets/img/contact/done.png" alt="Checked">
+                </div>
+                <span class="error-message" *ngIf="myForm.get('message')?.touched && messageError">{{ messageError
+                    }}</span>
+            </div>
+
+            <div class="agreementContainer">
+                <div class="agreement">
+                    <div class="custom-checkbox">
+                        <input type="checkbox" formControlName="agreement">
+                        <label for="agreement"></label>
+                    </div>
+                    <span translate>I've read the</span> <a href="" translate>privacy policy</a><span translate>and I
+                        agree to the processing of my data as outlined.</span>
+                </div>
+                <span class="error-message"
+                    *ngIf="myForm.get('agreement')?.touched && myForm.get('agreement')?.hasError('required')">{{
+                    agreementError }}</span>
+            </div>
+
+            <button type="submit" [disabled]="myForm.invalid" translate>Send Message :)</button>
+        </form>
+
+
+
+
+
+
+    </div>
+</section>

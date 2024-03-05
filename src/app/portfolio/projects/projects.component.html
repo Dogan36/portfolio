@@ -1,5 +1,5 @@
 <div class="projects">
-    <div class="project" *ngFor="let project of projects">
+    <div class="project"   *ngFor="let project of projects; let i = index" [ngClass]="{'reverse': i % 2 === 1}">
         <div class="projectLeft">
             <div class="projectImg">
                 <img src="./../../../assets/img/portfolio/emptyPC.png" alt="">
@@ -16,7 +16,7 @@
                         <span *ngIf="!last">&nbsp;|&nbsp;</span>
                     </span>
                 </div>
-                <span class="projectDecription">{{project.description}}</span>
+                <span class="projectDecription" translate>{{project.description}}</span>
             </div>
             <div class="projectButtons">
                 <a href="{{project.link}}">Live Test</a>

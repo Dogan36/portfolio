@@ -6,7 +6,12 @@
     align-items: center;
     justify-content: center;
     position: relative;
-  gap:35px
+  gap:35px;
+
+  p {
+    text-align: center;
+  }
+ 
 }
 
 .sectionHeader {

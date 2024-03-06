@@ -1,1 +1,103 @@
 @import './../../styles.scss';
+
+.footer{
+    position: relative;
+    border-top: 4px solid $purple;
+    height: 290px;
+    display: flex;
+   flex-direction: column;
+    @media (max-width: 650px) {
+        height: 380px;        
+    }
+}
+
+.footerContent{
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 650px) {
+        flex-direction: column;  
+        gap: 35px
+              
+    }
+}
+
+.footerLeft{
+    display: flex;
+    align-items: center;
+img{
+    height: 50px;
+    cursor: pointer;
+};
+    span{
+        cursor: pointer;
+        color: white;
+        font-size: 16px;
+        @media (max-width: 650px) {
+            position: absolute;
+            top:320px 
+        }
+    }
+}
+
+.footerMiddle{
+    font-size: 23px;
+    color: white;
+}
+
+.icons {
+    display: flex;
+    gap: 25px;
+
+    a {
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img {
+        height: 30px;
+        transition: all 125ms;
+
+        &:hover {
+            height: 40px;
+        }
+    }
+}
+
+.impressum{
+   overflow: hidden;
+    position: absolute;
+    left:0;
+    height: calc(100vh - 100px - 290px);
+    width: clamp(200px, 100vw, 1600px);
+    padding: 100px 5vw;
+    bottom: 290px;
+background-color: $backgroundcolor;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+
+    @media (max-width:650px) {
+        height: calc(100vh - 100px - 380px);
+        bottom: 380px;
+    }
+    
+        span, h2, a{
+            color:white;
+            text-decoration: none;
+        }
+
+        img{
+            cursor: pointer;
+            position:absolute;
+            top: 44px;
+            right: 44px;
+
+        }
+    
+}

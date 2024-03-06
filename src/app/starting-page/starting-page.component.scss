@@ -1,5 +1,7 @@
 @import './../../styles.scss';
-
+:host{
+    position: relative;
+  }
 .startingPage {
     height: clamp(600px, 100vh, 3000px);
     overflow: hidden;

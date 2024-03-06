@@ -1,3 +1,31 @@
 <footer id="footer" class="footer content">
-    Footer
+
+    <div class="footerContent">
+        <div class="footerLeft">
+            <img (click)="scrollTo('startingPage')" src="./../../assets/dc-low-resolution-logo-color-on-transparent-background.png" alt="">
+            <span (click)="toggleImpressum()">Impressum</span>
+        </div>
+        <span class="footerMiddle">&#169; Dogan Celik 2024</span>
+        <div class="icons">
+            <a href="https://github.com/Dogan36" target="_blank"><img
+                    src="./../../assets/img/startingPage/githubButton.png" alt=""></a>
+            <a href="https://www.linkedin.com/in/dogan-celik-19b197aa/?originalSubdomain=de" target="_blank"><img
+                    src="./../../assets/img/startingPage/linkedInButton.png" alt=""></a>
+            <a href="mailto:dogancelik86@gmail.com"><img src="./../../assets/img/startingPage/emailButton.png"
+                    alt=""></a>
+        </div>
+
+    </div>
+
+    <div [@toggle]="isOpen ? 'open' : 'closed'" class="impressum">
+        <h2>Impressum</h2>
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <span>Dogan Celik<br>
+            Therese-Giehse-Allee 91 <br>
+            81739 München</span>
+        <h2>Kontakt</h2>
+        <span>Telefon: <a href="">0173 388 30 388</a></span>
+        <span>E-Mail: <a href="mailto:dogancelik86@gmail.com">dogancelik86&#64;gmail.com</a> </span>
+        <img (click)="toggleImpressum()" class="close" src="./../../assets/img/footer/close.png" alt="">
+    </div>
 </footer>

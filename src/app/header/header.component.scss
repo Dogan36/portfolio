@@ -1,7 +1,12 @@
 @import './../../styles.scss';
 
 $headerHeight: 100px;
+:host{
+  display: block;
+  position: relative;
+  height: 0px;
 
+}
 header {
   width: clamp(200px, 100vw, 1600px);
   position: fixed;

@@ -58,16 +58,11 @@ section {
 ::-webkit-scrollbar-thumb:hover {
   background: #6161d1;
 }
-app-header{
-  display: block;
-  position: relative;
-  height: 0px;
 
-}
 
-app-starting-page{
-  position: relative;
-}
+
+
+
 
 h1{
   font-size: clamp(40px, 5.625vw, 90px);

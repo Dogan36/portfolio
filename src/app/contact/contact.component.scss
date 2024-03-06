@@ -1,10 +1,12 @@
 @import './../../styles.scss';
 
 .contact {
-
+position: relative;
     display: flex;
     flex-direction: column;
     gap: 85px;
+overflow: hidden;
+
 }
 
 .sectionHeader {
@@ -31,15 +33,23 @@
     justify-content: space-between;
     align-items: start;
 
+    @media (max-width: 1200px) {
+        flex-direction: column;
+        gap: 35px
+
+    }
 
 }
 
 .contactLeft {
-    width: 32%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     gap: 35px;
+    @media (max-width: 1200px) {
+        width: clamp(300px, 100%, 600px) ;
 
+    }
     h2 {
         font-size: clamp(25px, 2vw, 32px);
         color: white;
@@ -54,12 +64,7 @@
     }
 }
 
-.contactRight {
-    width: 42%;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-}
+
 
 
 .form {
@@ -67,7 +72,11 @@
     flex-direction: column;
     justify-content: start;
     gap: 32px;
+    width: 50%;
+    @media (max-width: 1200px) {
+        width: clamp(300px, 100%, 600px) ;
 
+    }
     .formField {
         gap: 10px;
         min-height: 77px;
@@ -76,7 +85,7 @@
 
         input,
         textarea {
-            width: 617px;
+            width: 100%;
             padding: 15px 25px 15px 25px;
             border: 1px solid $purple;
             border-radius: 10px;
@@ -108,8 +117,8 @@
     }
 
     button {
-        width: 195px;
-        height: 49px;
+        width: 253px;
+        height: 58px;
         padding: 15px 30px 15px 30px;
         border-radius: 10px;
         background-color: $lightblue;
@@ -134,15 +143,18 @@
 .agreementContainer {
     display: flex;
     flex-direction: column;
+    align-items: start;
     gap: 10px;
     height: 52px;
 
     .agreement {
         display: flex;
-        align-items: center;
+align-items: center;
         justify-content: center;
         gap: 8px;
         color: white;
+
+
 
         a {
             text-decoration: none;
@@ -164,10 +176,27 @@
     display: inline-block;
 }
 
-.status-img {
+.imgContainer {
     position: absolute;
     right: 10px;
     top: 13px;
+    height: 26px;
+    width: 26px;
+    backface-visibility: hidden;
+}
+
+.status-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: $backgroundcolor;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.imgContainer .flipped {
+    transform: rotateY(180deg);
 }
 
 .custom-checkbox {
@@ -226,4 +255,31 @@ input:-internal-autofill-selected {
     appearance: menulist-button;
     background-image: none !important;
     background-color: $backgroundcolor
+}
+
+.shadowContainer {
+        position: absolute;
+    z-index: -2;
+    top: 0px;
+    left: -46px;
+    rotate: 0deg;
+    /* transform: scaleY(1); */
+    width: 371px;
+    height: 158%;
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.scrollUp {
+   position: absolute;
+   right: 5%;
+   bottom: 45px;
+    cursor: pointer;
+    width: 24px;
+    &:hover {
+        transform: scale(1.1);
+        content: url(./../../assets/img/contact/gouphover.png);
+    }
 }

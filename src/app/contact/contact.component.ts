@@ -66,4 +66,12 @@ export class ContactComponent {
       // Hier kannst du die Logik für die Behandlung von Formularfehlern hinzufügen
     }
   }
+
+  scrollTo(section: string): void {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView();
+     
+    }
+  }
 }

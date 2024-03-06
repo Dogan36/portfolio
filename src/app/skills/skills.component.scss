@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    @media (max-width:900px) {
+    @media (max-width: 1200px) {
         flex-direction: column-reverse;
         gap:57px
     }
@@ -20,7 +20,7 @@
   gap: 57px;
   position: relative;
 
-  @media (max-width:900px) {
+  @media (max-width:1200px) {
     width: 100%;
     p{
         text-align: end;
@@ -32,15 +32,13 @@
     display: flex;
     align-items: center;
   
-    @media (max-width:900px) {
+    @media (max-width:1200px) {
         width: 100%;
         justify-content: end;
         margin-top:20px;
     }
 
-    h1 {
-        white-space: nowrap;
-    }
+   
 
     span {
         border-bottom: 4px solid $blue;
@@ -66,7 +64,7 @@
         flex: auto;
       }
 
-    @media (max-width:900px) {
+    @media (max-width:1200px) {
         width: 100%;
         justify-content: space-between;
         
@@ -101,7 +99,7 @@
 
 .getInTouch{
     border-style: unset;
-    width: clamp(133px, 10vw, 165px);
+    width: clamp(133px, 199vw, 200px);
     height: 58px;
     border-radius: 10px;
     background-color: $lightblue;

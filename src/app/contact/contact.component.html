@@ -17,46 +17,50 @@
         <form class="form" [formGroup]="myForm" (ngSubmit)="onSubmit(); false">
             <div class="formField">
                 <div class="input-container">
-                  <input formControlName="name" placeholder="Your name" required
-                    [ngClass]="{
+                    <input formControlName="name" placeholder="{{ 'Your name' | translate }}" required [ngClass]="{
                       'borderRed': myForm.get('name')?.touched && nameError,
                       'borderGreen': myForm.get('name')?.valid && myForm.get('name')?.touched && !nameError
                     }">
-                  <img *ngIf="myForm.get('name')?.touched && myForm.get('name')?.invalid"
-                    class="status-img" src="./../../assets/img/contact/error.png" alt="Error">
-                  <img *ngIf="myForm.get('name')?.valid && myForm.get('name')?.touched && !nameError"
-                    class="status-img" src="./../../assets/img/contact/done.png" alt="Checked">
+                    <div *ngIf="myForm.get('name')?.touched" class="imgContainer">
+                        <img [ngClass]="{'flipped': myForm.get('name')?.valid,}" class="status-img"
+                            src="./../../assets/img/contact/error.png" alt="Error">
+                        <img [ngClass]="{'flipped': myForm.get('name')?.invalid,}" class="status-img"
+                            src="./../../assets/img/contact/done.png" alt="Checked">
+                    </div>
                 </div>
                 <span class="error-message" *ngIf="myForm.get('name')?.touched && nameError">{{ nameError }}</span>
-              </div>
+            </div>
 
 
             <div class="formField">
                 <div class="input-container">
-                    <input formControlName="email" placeholder="Your email" required [ngClass]="{
+                    <input formControlName="email" placeholder="{{ 'Your email' | translate }}" required [ngClass]="{
                     'borderRed': myForm.get('email')?.touched && emailError,
                     'borderGreen': myForm.get('email')?.valid && myForm.get('email')?.touched
                   }">
-                    <img *ngIf="myForm.get('email')?.touched && myForm.get('email')?.invalid" class="status-img"
-                        src="./../../assets/img/contact/error.png" alt="Error">
-                    <img *ngIf="myForm.get('email')?.valid && myForm.get('email')?.touched" class="status-img"
-                        src="./../../assets/img/contact/done.png" alt="Checked">
+                    <div *ngIf="myForm.get('email')?.touched" class="imgContainer">
+                        <img [ngClass]="{'flipped': myForm.get('email')?.valid,}" class="status-img"
+                            src="./../../assets/img/contact/error.png" alt="Error">
+                        <img [ngClass]="{'flipped': myForm.get('email')?.invalid,}" class="status-img"
+                            src="./../../assets/img/contact/done.png" alt="Checked">
+                    </div>
                 </div>
                 <span class="error-message" *ngIf="myForm.get('email')?.touched && emailError">{{ emailError }}</span>
             </div>
 
             <div class="formField">
                 <div class="input-container">
-                    <textarea formControlName="message" placeholder="Your message" required [ngClass]="{
+                    <textarea formControlName="message" placeholder="{{ 'Your message' | translate }}" required [ngClass]="{
                     'borderRed': myForm.get('message')?.touched && messageError,
                     'borderGreen': myForm.get('message')?.valid && myForm.get('message')?.touched
                   }"></textarea>
 
-                    <img *ngIf="myForm.get('message')?.touched && myForm.get('message')?.invalid" class="status-img"
-                        src="./../../assets/img/contact/error.png" alt="Error">
-
-                    <img *ngIf="myForm.get('message')?.valid && myForm.get('message')?.touched" class="status-img"
-                        src="./../../assets/img/contact/done.png" alt="Checked">
+                    <div *ngIf="myForm.get('message')?.touched" class="imgContainer">
+                        <img [ngClass]="{'flipped': myForm.get('message')?.valid,}" class="status-img"
+                            src="./../../assets/img/contact/error.png" alt="Error">
+                        <img [ngClass]="{'flipped': myForm.get('message')?.invalid,}" class="status-img"
+                            src="./../../assets/img/contact/done.png" alt="Checked">
+                    </div>
                 </div>
                 <span class="error-message" *ngIf="myForm.get('message')?.touched && messageError">{{ messageError
                     }}</span>
@@ -68,7 +72,7 @@
                         <input type="checkbox" formControlName="agreement">
                         <label for="agreement"></label>
                     </div>
-                    <span translate>I've read the</span> <a href="" translate>privacy policy</a><span translate>and I
+                    <span translate>I've read the <a href="" translate>privacy policy</a> and I
                         agree to the processing of my data as outlined.</span>
                 </div>
                 <span class="error-message"
@@ -77,12 +81,14 @@
             </div>
 
             <button type="submit" [disabled]="myForm.invalid" translate>Send Message :)</button>
+            
         </form>
-
-
-
-
-
+    </div>
+    <div class="shadowContainer">
+        <img src="./../../assets/img/shadows/shadow10.png" alt="">
 
     </div>
+ 
+        <img class="scrollUp" (click)="scrollTo('startingPage')" src="./../../assets/img/contact/goup.png" alt="Scroll up">
+    
 </section>

@@ -12,20 +12,7 @@ import {
   selector: 'app-footer',
   standalone: true,
   imports: [],
-  animations: [
-    trigger('toggle', [
-      state('open', style({ height: '*' })),
-      state('closed', style({
-        'padding-top': '0',
-        'padding-bottom': '0',
-        height: '0',
-      })),
-      transition('open <=> closed', [
-        animate('0.125s')
-      ]),
-
-    ]),
-  ],
+  animations: [],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })

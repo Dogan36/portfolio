@@ -34,10 +34,11 @@
 
             <div class="formField">
                 <div class="input-container">
-                    <input formControlName="email" placeholder="{{ 'Your email' | translate }}" required [ngClass]="{
-                    'borderRed': myForm.get('email')?.touched && emailError,
-                    'borderGreen': myForm.get('email')?.valid && myForm.get('email')?.touched
-                  }">
+                    <input formControlName="email" placeholder="{{ 'Your email' | translate }}" required 
+                    [class.borderRed]="myForm.get('email')?.touched && emailError"
+                    [class.borderGreen]="myForm.get('email')?.valid && myForm.get('email')?.touched"
+                
+        >
                     <div *ngIf="myForm.get('email')?.touched" class="imgContainer">
                         <img [ngClass]="{'flipped': myForm.get('email')?.valid,}" class="status-img"
                             src="./../../assets/img/contact/error.png" alt="Error">
@@ -69,7 +70,7 @@
             <div class="agreementContainer">
                 <div class="agreement">
                     <div class="custom-checkbox">
-                        <input type="checkbox" formControlName="agreement">
+                        <input id="agreement" type="checkbox" formControlName="agreement">
                         <label for="agreement"></label>
                     </div>
                     <span translate>I've read the <a href="" translate>privacy policy</a> and I

@@ -1,11 +1,11 @@
 <div class="projects">
     <div class="project"   *ngFor="let project of projects; let i = index" [ngClass]="{'reverse': i % 2 === 1}">
         <div class="projectLeft">
-            <a href="{{project.link}}" target="_blank" class="projectImg">
-                <img loading="lazy" src="./../../../assets/img/portfolio/emptyPC.png" alt="">
-                <img loading="lazy" src="./../../../assets/img/portfolio/{{project.imgname}}.jpg">
-                <img loading="lazy" src="./../../../assets/img/portfolio/{{project.imgname}}.gif">
-            </a>
+       <!--   <a href="{{project.link}}" target="_blank" class="projectImg">
+                <img  src="./../../../assets/img/portfolio/emptyPC.png" alt="">
+                <img  src="./../../../assets/img/portfolio/{{project.imgname}}.jpg">
+                <img  src="./../../../assets/img/portfolio/{{project.imgname}}.gif">
+            </a> --> 
         </div>
         <div class="projectRight">
             <div class="projectInfo">

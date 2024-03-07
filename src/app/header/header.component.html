@@ -1,6 +1,6 @@
 <header #header>
 
-  <img src="./../../assets/logo-black.svg" alt="Logo" class="logo">
+  <img class="logo" src="./../../assets/logo-black.svg" alt="Logo" class="logo">
   <div class="headerRight">
     <a (click)="scrollTo('aboutMe')" [ngClass]="{ 'active': activeSection === 'aboutMe' }" translate>About me
     </a>
@@ -15,14 +15,16 @@
 
 
     <!-- Weitere Links hinzufügen -->
-    <ng-container *ngFor="let language of languagesService.languageList">
+    <div class="imgContainer" (click)="languagesService.changeSiteLanguage()">
 
-      <div *ngIf="languagesService.currentLanguage !== language.code"
-        (click)="languagesService.changeSiteLanguage(language.code)">
-        <img [src]="language.imageSrc" alt="{{ language.label }}" />
-      </div>
+<img class="status-img" [ngClass]="{'flipped': languagesService.currentLanguage == 'de'}" 
+                            src="./../../assets/img/header/gerFlag.png" alt="Error">
+  <img class="status-img" [ngClass]="{'flipped': languagesService.currentLanguage == 'en'}"
+                            src="./../../assets/img/header/gbFlag.png" alt="Checked">
 
-    </ng-container>
+
+
+    </div>
   </div>
 
   <div class="headerMobile" [ngClass]="{'active': burgerMenuOpen === true}">

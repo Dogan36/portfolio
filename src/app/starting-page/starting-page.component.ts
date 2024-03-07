@@ -10,12 +10,9 @@ import AOS from 'aos';
   templateUrl: './starting-page.component.html',
   styleUrl: './starting-page.component.scss'
 })
-export class StartingPageComponent implements OnInit{
-  constructor(public languagesService: LanguagesService) { }
-  ngOnInit() {
-    console.log('init')
-   AOS.init();
-  }
+export class StartingPageComponent{
+  constructor(public languagesService: LanguagesService) {  AOS.init();}
+  
   scrollTo(section: string): void {
     const element = document.getElementById(section);
     if (element) {

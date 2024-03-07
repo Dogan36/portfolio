@@ -90,4 +90,9 @@ export class SkillsComponent {
 
     }
   }
+
+  calculateAosOffset(index: number): number {
+    console.log('test')
+    return 30 + (index * 1000);
+  }
 }

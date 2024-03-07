@@ -1,19 +1,19 @@
 <section id="skills" class="skills content">
     <div id="skillsContainer" class="skillsContainer">
 
-        <div class="skill" *ngFor="let skill of skills"  (mouseover)="onMouseOver($event, skill)" (mouseout)="onMouseOut($event, skill)">
+        <div  class="skill" *ngFor="let skill of skills, let i=index" data-aos="flip-left" [attr.data-aos-delay]="i * 100" (mouseover)="onMouseOver($event, skill)" (mouseout)="onMouseOut($event, skill)">
             <img [src]="skill.img" alt="{{ skill.skill }} Image">
             <span>{{ skill.skill }}</span>
           </div>
 
     </div>
-    <div class="contentRight">
+    <div data-aos="fade-left" class="contentRight">
         <div class="sectionHeader">
             <h1 translate>My Skills</h1>
             <span></span>
         </div>
         <p translate>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero maxime, quaerat, aliquid tenetur ipsa similique, consectetur cum repudiandae assumenda culpa ipsum fuga a adipisci dicta veniam ratione ducimus facilis sapiente.</p>
-        <button (click)="scrollTo('contact')" class="getInTouch" translate>Get in touch</button>
+        <button data-aos="flip-down" data-aos-delay="300" (click)="scrollTo('contact')" class="getInTouch" translate>Get in touch</button>
     </div>
     <div class="shadowContainer">
         <img src="./../../assets/img/shadows/shadow3.png" alt="">

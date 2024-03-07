@@ -9,8 +9,12 @@ $headerHeight: 100px;
 }
 header {
   width: clamp(200px, 100vw, 1600px);
+
   position: fixed;
   top: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+ 
   height: $headerHeight;
   display: flex;
   align-items: center;
@@ -20,15 +24,12 @@ header {
 
   z-index: 999;
 
-  img:first-child {
+ .logo {
     height: 80px;
     cursor: pointer;
   }
 
-  img:last-child {
-    height: 45px;
-    cursor: pointer;
-  }
+
 }
 
 .headerRight {
@@ -178,3 +179,24 @@ header {
   overflow: hidden;
 }
 
+.imgContainer {
+cursor: pointer;
+  position: relative;
+  height: 45px;
+  width: 45px;
+  backface-visibility: hidden;
+}
+
+.status-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: $backgroundcolor;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.imgContainer .flipped {
+  transform: rotateY(180deg);
+}

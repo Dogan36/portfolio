@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgxTranslateModule } from '../translate/translate.module';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { NgIf, NgClass } from '@angular/common';
+import AOS from 'aos';
 @Component({
   selector: 'app-contact',
   standalone: true,

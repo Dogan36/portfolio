@@ -3,7 +3,7 @@
     position: relative;
   }
 .startingPage {
-    height: clamp(600px, 100vh, 3000px);
+    height: clamp(300px, calc(100vh - 100px), 3000px);
     overflow: hidden;
     position: relative;
     padding-bottom: 0

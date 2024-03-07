@@ -4,22 +4,21 @@
             <div class="picture">
                 <img src="./../../assets/img/startingPage/picture.png" alt="">
                 <img src="./../../assets/img/shadows/shadow1.png">
-
             </div>
             <div class="introduction">
                 <div class="iAm">
-                    <div class="iAmLeft" [ngClass]="{'iAmLeftDE':languagesService.currentLanguage == 'de'}" translate>I am
+                    <div data-aos="fade-left" class="iAmLeft" [ngClass]="{'iAmLeftDE':languagesService.currentLanguage == 'de'}" translate>I am
                     </div>
                     <div class="iAmRight">
-                        <h1 class="name">Dogan Celik</h1>
-                        <span class="jobTitle" translate>FRONTEND DEVELOPER</span>
+                        <h1 data-aos="fade-down" class="name">Dogan Celik</h1>
+                        <span data-aos="fade-up" class="jobTitle" translate>FRONTEND DEVELOPER</span>
                     </div>
                 </div>
-                <button (click)="scrollTo('contact')" class="letsTalk">Let's talk!</button>
+                <button data-aos="flip-down" data-aos-delay="500" (click)="scrollTo('contact')" class="letsTalk">Let's talk!</button>
             </div>
         </div>
         <div class="sectionBottom">
-            <div class="reference">
+            <div  data-aos-offset="-300" data-aos="fade-right" class="reference">
                 <div class="line"></div>
                 <div class="icons">
                     <a href="https://github.com/Dogan36" target="_blank"><img src="./../../assets/img/startingPage/githubButton.png" alt=""></a>

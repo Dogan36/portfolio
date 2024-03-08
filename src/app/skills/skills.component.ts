@@ -11,10 +11,7 @@ import { NgFor } from '@angular/common';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
-
-  
-
-  
+ 
   skills  = [
     {
       skill: "Angular",
@@ -58,11 +55,6 @@ export class SkillsComponent {
     },
   ];
   
-  // Function to display skills
- 
-
-
-
   constructor(public languagesService: LanguagesService, private el: ElementRef, private renderer: Renderer2) { }
 
   onMouseOver(event:Event, skill: { skill: any; }): void {
@@ -71,7 +63,6 @@ export class SkillsComponent {
       element.style.gap = '20px';
     }
     console.log(`Mouse over ${skill.skill}`);
-  
   }
 
   onMouseOut(event:Event, skill: { skill: any; }): void {
@@ -79,7 +70,6 @@ export class SkillsComponent {
     if (element) {
       element.style.gap = '10px'
     }
-    console.log(`Mouse out ${skill.skill}`);
   }
   
 
@@ -87,12 +77,10 @@ export class SkillsComponent {
     const element = document.getElementById(section);
     if (element) {
       element.scrollIntoView();
-
     }
   }
 
   calculateAosOffset(index: number): number {
-    console.log('test')
     return 30 + (index * 1000);
   }
 }

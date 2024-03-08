@@ -34,11 +34,9 @@
 
             <div class="formField">
                 <div class="input-container">
-                    <input formControlName="email" placeholder="{{ 'Your email' | translate }}" required 
-                    [class.borderRed]="myForm.get('email')?.touched && emailError"
-                    [class.borderGreen]="myForm.get('email')?.valid && myForm.get('email')?.touched"
-                
-        >
+                    <input formControlName="email" placeholder="{{ 'Your email' | translate }}" required
+                        [class.borderRed]="myForm.get('email')?.touched && emailError"
+                        [class.borderGreen]="myForm.get('email')?.valid && myForm.get('email')?.touched">
                     <div *ngIf="myForm.get('email')?.touched" class="imgContainer">
                         <img [ngClass]="{'flipped': myForm.get('email')?.valid,}" class="status-img"
                             src="./../../assets/img/contact/error.png" alt="Error">
@@ -51,7 +49,8 @@
 
             <div class="formField">
                 <div class="input-container">
-                    <textarea formControlName="message" placeholder="{{ 'Your message' | translate }}" required [ngClass]="{
+                    <textarea formControlName="message" placeholder="{{ 'Your message' | translate }}" required
+                        [ngClass]="{
                     'borderRed': myForm.get('message')?.touched && messageError,
                     'borderGreen': myForm.get('message')?.valid && myForm.get('message')?.touched
                   }"></textarea>
@@ -73,7 +72,7 @@
                         <input id="agreement" type="checkbox" formControlName="agreement">
                         <label for="agreement"></label>
                     </div>
-                    <span translate>I've read the <a href="" translate>privacy policy</a> and I
+                    <span translate>I've read the <a routerLink="/data" href="" translate>privacy policy</a> and I
                         agree to the processing of my data as outlined.</span>
                 </div>
                 <span class="error-message"
@@ -82,14 +81,14 @@
             </div>
 
             <button type="submit" [disabled]="myForm.invalid" translate>Send Message :)</button>
-            
+
         </form>
     </div>
     <div class="shadowContainer">
         <img src="./../../assets/img/shadows/shadow10.png" alt="">
 
     </div>
- 
-        <img class="scrollUp" (click)="scrollTo('startingPage')" src="./../../assets/img/contact/goup.png" alt="Scroll up">
-    
+
+    <img class="scrollUp" (click)="scrollTo('startingPage')" src="./../../assets/img/contact/goup.png" alt="Scroll up">
+
 </section>

@@ -26,6 +26,7 @@
 .footerLeft{
     display: flex;
     align-items: center;
+    flex-direction: column;
 img{
     height: 50px;
     cursor: pointer;
@@ -34,6 +35,9 @@ img{
         cursor: pointer;
         color: white;
         font-size: 16px;
+        &:hover{
+            color: $purple
+        }
         @media (max-width: 650px) {
             position: absolute;
             top:320px 

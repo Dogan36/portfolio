@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NgxTranslateModule } from '../translate/translate.module';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { NgIf, NgClass } from '@angular/common';
 import AOS from 'aos';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-contact',
   standalone: true,
@@ -12,7 +13,9 @@ import AOS from 'aos';
 })
 export class ContactComponent {
   myForm: FormGroup;
-  rotationClass = '';
+  mailTest = true;
+http = inject(HttpClient)
+
 
   constructor(private fb: FormBuilder) {
     this.myForm = this.fb.group({
@@ -22,6 +25,40 @@ export class ContactComponent {
       agreement: [false, Validators.requiredTrue],
     });
   }
+
+
+
+  post = {
+    endPoint: 'https://deineDomain.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+  onSubmit() {
+    if (this.myForm.valid) {
+      this.http.post(this.post.endPoint, this.post.body(this.myForm.value))
+        .subscribe({
+          next: (response) => {
+
+            this.myForm.reset();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (this.myForm.valid && this.mailTest) {
+
+      this.myForm.reset();
+    }
+  }
+
+
 
   get nameError() {
     const nameControl = this.myForm.get('name');
@@ -58,15 +95,7 @@ export class ContactComponent {
     return 'Please accept the privacy policy';
   }
 
-  onSubmit() {
-    if (this.myForm.valid) {
-      console.log('Form submitted successfully!');
-      // Hier kannst du die Logik für die erfolgreiche Formularübermittlung hinzufügen
-    } else {
-      console.log('Form has errors!');
-      // Hier kannst du die Logik für die Behandlung von Formularfehlern hinzufügen
-    }
-  }
+  
 
   scrollTo(section: string): void {
     const element = document.getElementById(section);

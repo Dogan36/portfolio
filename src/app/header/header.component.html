@@ -1,6 +1,6 @@
-<header #header>
-
-  <img class="logo" src="./../../assets/logo-black.svg" alt="Logo" class="logo">
+<header  #header>
+<a href="./data">Data</a>
+  <img (click)="scrollTo('startingPage')" class="logo" src="./../../assets/img/logo/logoSmall.png" width="85.6" height="80" alt="Logo" >
   <div class="headerRight">
     <a (click)="scrollTo('aboutMe')" [ngClass]="{ 'active': activeSection === 'aboutMe' }" translate>About me
     </a>

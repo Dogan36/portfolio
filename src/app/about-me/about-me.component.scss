@@ -2,7 +2,9 @@
 
 .aboutMe {
     position: relative;
-    min-height: calc(100vh - 100px);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .aboutMeContent {
@@ -71,12 +73,14 @@
     border: 4px solid $lightblue;
     border-radius: 100%;
     overflow: hidden;
-    
+    position: relative;
 
     img {
-        object-fit: cover;
-        height: 100%;
-        aspect-ratio: 1/1;
+        height: 112%;
+    position: absolute;
+        top: 3%;
+        left: 9%;
+       
     }
 
 }

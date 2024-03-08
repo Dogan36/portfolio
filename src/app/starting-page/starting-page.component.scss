@@ -4,15 +4,16 @@
   }
 .startingPage {
   
-    height: clamp(300px, calc(100vh - 100px), 3000px);
+    height: 100vh;
     overflow: hidden;
     position: relative;
-    padding-bottom: 0
+   
 }
 
 .sectionContent {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     height: 100%;
 }
 
@@ -34,7 +35,7 @@
 
 .picture {
     width: 40%;
-    height: 80%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,7 +70,7 @@
 .curtain2 {
     position: absolute;
     width: 100%;
-    bottom: -12vh;
+    bottom: 0vh;
     height: 50%;
     left: 0;
     z-index: 2;
@@ -168,6 +169,7 @@
     margin-bottom: 10px;
     z-index: 7;
     height: 30px;
+    
 }
 
 
@@ -188,6 +190,7 @@
         @media (max-width:600px) {
             display: none;
         }
+
     }
 
 
@@ -204,7 +207,7 @@
 .icons {
     display: flex;
     gap: 25px;
-
+    filter:drop-shadow(2px 1px 2px $purple);
     a {
         height: 40px;
         width: 40px;

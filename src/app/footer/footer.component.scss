@@ -30,6 +30,7 @@
 img{
     height: 50px;
     cursor: pointer;
+    filter:drop-shadow(3px 2px 2px $purple);
 };
     span{
         cursor: pointer;
@@ -65,6 +66,7 @@ img{
     img {
         height: 30px;
         transition: all 125ms;
+        filter:drop-shadow(2px 1px 2px $purple);
 
         &:hover {
             height: 40px;

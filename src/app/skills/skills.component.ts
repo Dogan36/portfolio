@@ -15,43 +15,43 @@ export class SkillsComponent {
   skills  = [
     {
       skill: "Angular",
-      img: "./../../assets/img/skills/angular.png",
+      img: "assets/img/skills/angular.png",
     },
     {
       skill: "TypeScript",
-      img: "./../../assets/img/skills/typescript.png",
+      img: "assets/img/skills/typescript.png",
     },
     {
       skill: "JavaScript",
-      img: "./../../assets/img/skills/javascript.png",
+      img: "assets/img/skills/javascript.png",
     },
     {
     skill: "HTML",
-      img: "./../../assets/img/skills/html.png",
+      img: "assets/img/skills/html.png",
     },
     {
       skill: "Firebase",
-      img: "./../../assets/img/skills/firebase.png",
+      img: "assets/img/skills/firebase.png",
     },
     {
       skill: "GIT",
-      img: "./../../assets/img/skills/git.png",
+      img: "assets/img/skills/git.png",
     },
     {
       skill: "CSS",
-      img: "./../../assets/img/skills/css.png",
+      img: "assets/img/skills/css.png",
     },
     {
       skill: "Rest-Api",
-      img: "./../../assets/img/skills/api.png",
+      img: "assets/img/skills/api.png",
     },
     {
       skill: "Scrum",
-      img: "./../../assets/img/skills/scrum.png",
+      img: "assets/img/skills/scrum.png",
     },
     {
       skill: "Material design",
-      img: "./../../assets/img/skills/materialdesign.png",
+      img: "assets/img/skills/materialdesign.png",
     },
   ];
   

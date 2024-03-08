@@ -2,9 +2,9 @@
     <div class="project" [attr.data-aos]="i % 2 === 0 ? 'fade-left' : 'fade-right'" data-aos-offset="200"  *ngFor="let project of projects; let i = index" [ngClass]="{'reverse': i % 2 === 1}" >
         <div class="projectLeft">
     <a href="{{project.link}}" target="_blank" class="projectImg">
-                <img  src="./../../../assets/img/portfolio/emptyPC.png" alt="">
-                <img  src="./../../../assets/img/portfolio/{{project.imgname}}.jpg">
-                <img  src="./../../../assets/img/portfolio/{{project.imgname}}.gif">
+                <img  src="assets/img/portfolio/emptyPC.png" alt="">
+                <img  src="assets/img/portfolio/{{project.imgname}}.jpg">
+                <img  src="assets/img/portfolio/{{project.imgname}}.gif">
             </a> 
         </div>
         <div class="projectRight">

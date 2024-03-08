@@ -23,9 +23,9 @@
                     }">
                     <div *ngIf="myForm.get('name')?.touched" class="imgContainer">
                         <img [ngClass]="{'flipped': myForm.get('name')?.valid,}" class="status-img"
-                            src="./../../assets/img/contact/error.png" alt="Error">
+                            src="assets/img/contact/error.png" alt="Error">
                         <img [ngClass]="{'flipped': myForm.get('name')?.invalid,}" class="status-img"
-                            src="./../../assets/img/contact/done.png" alt="Checked">
+                            src="assets/img/contact/done.png" alt="Checked">
                     </div>
                 </div>
                 <span class="error-message" *ngIf="myForm.get('name')?.touched && nameError">{{ nameError }}</span>
@@ -39,9 +39,9 @@
                         [class.borderGreen]="myForm.get('email')?.valid && myForm.get('email')?.touched">
                     <div *ngIf="myForm.get('email')?.touched" class="imgContainer">
                         <img [ngClass]="{'flipped': myForm.get('email')?.valid,}" class="status-img"
-                            src="./../../assets/img/contact/error.png" alt="Error">
+                            src="assets/img/contact/error.png" alt="Error">
                         <img [ngClass]="{'flipped': myForm.get('email')?.invalid,}" class="status-img"
-                            src="./../../assets/img/contact/done.png" alt="Checked">
+                            src="assets/img/contact/done.png" alt="Checked">
                     </div>
                 </div>
                 <span class="error-message" *ngIf="myForm.get('email')?.touched && emailError">{{ emailError }}</span>
@@ -57,9 +57,9 @@
 
                     <div *ngIf="myForm.get('message')?.touched" class="imgContainer">
                         <img [ngClass]="{'flipped': myForm.get('message')?.valid,}" class="status-img"
-                            src="./../../assets/img/contact/error.png" alt="Error">
+                            src="assets/img/contact/error.png" alt="Error">
                         <img [ngClass]="{'flipped': myForm.get('message')?.invalid,}" class="status-img"
-                            src="./../../assets/img/contact/done.png" alt="Checked">
+                            src="assets/img/contact/done.png" alt="Checked">
                     </div>
                 </div>
                 <span class="error-message" *ngIf="myForm.get('message')?.touched && messageError">{{ messageError
@@ -85,10 +85,10 @@
         </form>
     </div>
     <div class="shadowContainer">
-        <img src="./../../assets/img/shadows/shadow10.png" alt="">
+        <img src="assets/img/shadows/shadow10.png" alt="">
 
     </div>
 
-    <img class="scrollUp" (click)="scrollTo('startingPage')" src="./../../assets/img/contact/goup.png" alt="Scroll up">
+    <img class="scrollUp" (click)="scrollTo('startingPage')" src="assets/img/contact/goup.png" alt="Scroll up">
 
 </section>

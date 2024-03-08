@@ -1,6 +1,6 @@
 <header  #header>
 <a href="./data">Data</a>
-  <img (click)="scrollTo('startingPage')" class="logo" src="./../../assets/img/logo/logoSmall.png" width="85.6" height="80" alt="Logo" >
+  <img (click)="scrollTo('startingPage')" class="logo" src="assets/img/logo/logoSmall.png" width="85.6" height="80" alt="Logo" >
   <div class="headerRight">
     <a (click)="scrollTo('aboutMe')" [ngClass]="{ 'active': activeSection === 'aboutMe' }" translate>About me
     </a>
@@ -18,9 +18,9 @@
     <div class="imgContainer" (click)="languagesService.changeSiteLanguage()">
 
 <img class="status-img" [ngClass]="{'flipped': languagesService.currentLanguage == 'de'}" 
-                            src="./../../assets/img/header/gerFlag.png" alt="Error">
+                            src="assets/img/header/gerFlag.png" alt="Error">
   <img class="status-img" [ngClass]="{'flipped': languagesService.currentLanguage == 'en'}"
-                            src="./../../assets/img/header/gbFlag.png" alt="Checked">
+                            src="assets/img/header/gbFlag.png" alt="Checked">
 
 
 

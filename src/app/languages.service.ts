@@ -1,7 +1,7 @@
 
   import { Injectable, importProvidersFrom } from '@angular/core';
   import { TranslateService } from '@ngx-translate/core';
-
+import { NgxTranslateModule } from './translate/translate.module';
 
   
   @Injectable({
@@ -23,9 +23,8 @@
     changeSiteLanguage(): void {
       const newLanguage = this.currentLanguage === "en" ? "de" : "en";
       
-      this.currentLanguage = newLanguage;
-      debugger
       this.translate.use(newLanguage);
+      this.currentLanguage = newLanguage;
     
       console.log('currentLanguage', this.currentLanguage);
     }

@@ -2,12 +2,12 @@ import { Component, inject } from '@angular/core';
 import { NgxTranslateModule } from '../../translate/translate.module';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { NgIf, NgClass } from '@angular/common';
-import AOS from 'aos';
+import { RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [NgxTranslateModule, ReactiveFormsModule, NgIf, NgClass],
+  imports: [NgxTranslateModule, ReactiveFormsModule, NgIf, NgClass, RouterLink],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

@@ -20,7 +20,9 @@ export class HeaderComponent {
 
   burgerMenuOpen: boolean = false
 
-  constructor(public languagesService: LanguagesService) { }
+  constructor(public languagesService: LanguagesService) {
+   
+   }
 
 
  

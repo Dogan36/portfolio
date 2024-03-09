@@ -1,4 +1,4 @@
-import { Component, HostListener} from '@angular/core';
+import { Component, HostListener, inject} from '@angular/core';
 import { NgxTranslateModule } from '../../translate/translate.module';
 import AOS from 'aos';
 import { LanguagesService } from '../../languages.service';
@@ -8,33 +8,37 @@ import { TranslateCompiler } from '@ngx-translate/core';
 
 
 
+
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [NgxTranslateModule],
+  imports: [NgxTranslateModule, ],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'
 })
 
 export class AboutMeComponent {
 constructor() {}
+;
   scrollRef: number = 0;
 
   ngAfterViewInit() {
-    console.log(TranslateCompiler)
+
     // Initialisieren Sie AOS nach der Initialisierung der Ansicht
     AOS.init();
-
+  
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {
     this.handleScrollEvent();
+    
   }
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event): void {
     this.handleScrollEvent();
+  
   }
 
   private handleScrollEvent(): void {

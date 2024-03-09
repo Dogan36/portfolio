@@ -1,6 +1,5 @@
 import { Component,  ElementRef, Renderer2 } from '@angular/core';
-import { NgxTranslateModule } from '../translate/translate.module';
-import { LanguagesService } from '../languages.service';
+import { NgxTranslateModule } from '../../translate/translate.module';
 import { NgFor } from '@angular/common';
 
 @Component({
@@ -55,7 +54,7 @@ export class SkillsComponent {
     },
   ];
   
-  constructor(public languagesService: LanguagesService, private el: ElementRef, private renderer: Renderer2) { }
+  constructor(private el: ElementRef, private renderer: Renderer2) { }
 
   onMouseOver(event:Event, skill: { skill: any; }): void {
     const element = (event.currentTarget as HTMLElement);

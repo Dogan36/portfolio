@@ -1,17 +1,11 @@
 import { Component, Renderer2, ElementRef } from '@angular/core';
+import { NgxTranslateModule } from '../translate/translate.module';
 
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-} from '@angular/animations';;
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [NgxTranslateModule],
   animations: [],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
@@ -22,8 +16,8 @@ export class FooterComponent {
 
   constructor(
     private renderer: Renderer2,
-    private el: ElementRef
-  ) { }
+    private el: ElementRef)
+   { }
 
   toggleImpressum() {
     this.isOpen = !this.isOpen;
@@ -44,5 +38,6 @@ export class FooterComponent {
       element.scrollIntoView();
      
     }
+
   }
 }

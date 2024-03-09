@@ -1,4 +1,4 @@
-@import './../../styles.scss';
+@import './../../../styles.scss';
 
 .contact {
 position: relative;
@@ -232,14 +232,14 @@ align-items: center;
     /* Breite des Bildes */
     height: 18px;
     /* Höhe des Bildes */
-    background-image: url('./../../assets/img/contact/unchecked.png');
+    background-image: url('./../../../assets/img/contact/unchecked.png');
     /* Bild für nicht ausgewählte Checkbox */
     background-size: cover;
     cursor: pointer;
 }
 
 .custom-checkbox input:checked+label {
-    background-image: url('./../../assets/img/contact/checked.png');
+    background-image: url('./../../../assets/img/contact/checked.png');
     /* Bild für ausgewählte Checkbox */
 }
 
@@ -280,6 +280,6 @@ input:-internal-autofill-selected {
     width: 24px;
     &:hover {
         transform: scale(1.1);
-        content: url(./../../assets/img/contact/gouphover.png);
+        content: url(./../../../assets/img/contact/gouphover.png);
     }
 }

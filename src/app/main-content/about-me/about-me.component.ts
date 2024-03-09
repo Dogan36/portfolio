@@ -1,7 +1,9 @@
 import { Component, HostListener, AfterViewInit } from '@angular/core';
-import { NgxTranslateModule } from '../translate/translate.module';
-import { LanguagesService } from '../languages.service';
+import { NgxTranslateModule } from '../../translate/translate.module';
+
 import AOS from 'aos';
+
+
 
 @Component({
   selector: 'app-about-me',
@@ -10,13 +12,15 @@ import AOS from 'aos';
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'
 })
+
 export class AboutMeComponent {
-  constructor(public languagesService: LanguagesService) {AOS.init()}
+
   scrollRef: number = 0;
 
   ngAfterViewInit() {
     // Initialisieren Sie AOS nach der Initialisierung der Ansicht
     AOS.init();
+
   }
 
   @HostListener('window:resize', ['$event'])

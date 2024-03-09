@@ -1,4 +1,4 @@
-@import './../../styles.scss';
+@import './../../../styles.scss';
 :host{
     position: relative;
   }
@@ -252,7 +252,7 @@
     }
 
     img{
-        content: url(./../../assets/img/startingPage/arrowDown.svg);
+        content: url(./../../../assets/img/startingPage/arrowDown.svg);
         margin-left: -2px;
         width: 18px;
     }

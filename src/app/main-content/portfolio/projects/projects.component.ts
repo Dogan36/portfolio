@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgFor, NgIf, NgClass} from '@angular/common';
-import { NgxTranslateModule } from './../../translate/translate.module'
+import { NgxTranslateModule } from '../../../translate/translate.module';
 
 
 @Component({

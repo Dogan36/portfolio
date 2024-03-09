@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { NgxTranslateModule } from './translate/translate.module';
 import { FooterComponent } from './footer/footer.component';
+import { LanguagesService } from './languages.service';
 
 
 
@@ -18,5 +19,5 @@ import { FooterComponent } from './footer/footer.component';
 })
 export class AppComponent {
   title = 'portfolio';
-
+constructor(public languagesService: LanguagesService) {}
 }

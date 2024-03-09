@@ -2,6 +2,7 @@ import { Component, Renderer2, ElementRef } from '@angular/core';
 import { NgxTranslateModule } from '../translate/translate.module';
 
 
+
 @Component({
   selector: 'app-footer',
   standalone: true,
@@ -16,8 +17,9 @@ export class FooterComponent {
 
   constructor(
     private renderer: Renderer2,
-    private el: ElementRef)
-   { }
+    private el: ElementRef,
+    ) {}
+
 
   toggleImpressum() {
     this.isOpen = !this.isOpen;

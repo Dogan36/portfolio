@@ -1,7 +1,10 @@
-import { Component, HostListener, AfterViewInit } from '@angular/core';
+import { Component, HostListener} from '@angular/core';
 import { NgxTranslateModule } from '../../translate/translate.module';
-
 import AOS from 'aos';
+import { LanguagesService } from '../../languages.service';
+import { appConfig } from '../../app.config';
+import { AppComponent } from '../../app.component';
+import { TranslateCompiler } from '@ngx-translate/core';
 
 
 
@@ -14,10 +17,11 @@ import AOS from 'aos';
 })
 
 export class AboutMeComponent {
-
+constructor() {}
   scrollRef: number = 0;
 
   ngAfterViewInit() {
+    console.log(TranslateCompiler)
     // Initialisieren Sie AOS nach der Initialisierung der Ansicht
     AOS.init();
 
@@ -40,5 +44,6 @@ export class AboutMeComponent {
     } else {
       AOS.refresh();
     }
+    
   }
 }

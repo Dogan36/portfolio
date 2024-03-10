@@ -12,7 +12,7 @@ import { NgxTranslateModule } from './translate/translate.module';
     
     languageList = [
       { code: 'en', label: 'English', imageSrc: '/assets/gbFlag.png' },
-      { code: 'de', label: 'Deutsch', imageSrc: '/assets/gerFlag.png' },.
+      { code: 'de', label: 'Deutsch', imageSrc: '/assets/gerFlag.png' },
     ];
     
     currentLanguage: string = "en";

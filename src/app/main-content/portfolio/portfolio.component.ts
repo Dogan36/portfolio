@@ -11,5 +11,4 @@ import { NgxTranslateModule } from '../../translate/translate.module';
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
-
 }

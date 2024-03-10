@@ -1,13 +1,12 @@
 @import './../../../styles.scss';
 
 .contact {
-position: relative;
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 85px;
-
-overflow-y: hidden;
-margin-bottom: 0 !important;
+    overflow-y: hidden;
+    margin-bottom: 0 !important;
 }
 
 .sectionHeader {
@@ -24,7 +23,6 @@ margin-bottom: 0 !important;
         position: absolute;
         left: 0;
         width: clamp(16px, 4.5vw, 58px);
-
     }
 }
 
@@ -33,12 +31,10 @@ margin-bottom: 0 !important;
     display: flex;
     justify-content: space-between;
     align-items: start;
-    
 
     @media (max-width: 1200px) {
         flex-direction: column;
         gap: 35px
-
     }
 
 }
@@ -48,10 +44,11 @@ margin-bottom: 0 !important;
     display: flex;
     flex-direction: column;
     gap: 35px;
-    @media (max-width: 1200px) {
-        width: clamp(300px, 100%, 600px) ;
 
+    @media (max-width: 1200px) {
+        width: clamp(300px, 100%, 600px);
     }
+
     h2 {
         font-size: clamp(25px, 2vw, 32px);
         color: white;
@@ -66,19 +63,17 @@ margin-bottom: 0 !important;
     }
 }
 
-
-
-
 .form {
     display: flex;
     flex-direction: column;
     justify-content: start;
     gap: 32px;
     width: 50%;
-    @media (max-width: 1200px) {
-        width: clamp(300px, 100%, 600px) ;
 
+    @media (max-width: 1200px) {
+        width: clamp(300px, 100%, 600px);
     }
+
     .formField {
         gap: 10px;
         min-height: 77px;
@@ -100,8 +95,6 @@ margin-bottom: 0 !important;
             &:hover {
                 border-color: $bluegreen;
             }
-
-
         }
 
         textarea {
@@ -137,10 +130,8 @@ margin-bottom: 0 !important;
             color: white;
             cursor: not-allowed;
         }
-
     }
 }
-
 
 .agreementContainer {
     display: flex;
@@ -151,12 +142,10 @@ margin-bottom: 0 !important;
 
     .agreement {
         display: flex;
-align-items: center;
+        align-items: center;
         justify-content: center;
         gap: 8px;
         color: white;
-
-
 
         a {
             text-decoration: none;
@@ -166,11 +155,9 @@ align-items: center;
 
 }
 
-
 .error-message {
     color: red;
     font-size: 12px;
-
 }
 
 .input-container {
@@ -215,7 +202,6 @@ align-items: center;
     &:hover {
         background-color: $alternative;
     }
-
 }
 
 .custom-checkbox input {
@@ -231,11 +217,8 @@ align-items: center;
     position: relative;
     display: inline-block;
     width: 18px;
-    /* Breite des Bildes */
     height: 18px;
-    /* Höhe des Bildes */
     background-image: url('./../../../assets/img/contact/unchecked.png');
-    /* Bild für nicht ausgewählte Checkbox */
     background-size: cover;
     cursor: pointer;
 }
@@ -244,7 +227,6 @@ align-items: center;
     background-image: url('./../../../assets/img/contact/checked.png');
     /* Bild für ausgewählte Checkbox */
 }
-
 
 ::placeholder {
     color: white;
@@ -260,26 +242,27 @@ input:-internal-autofill-selected {
 }
 
 .shadowContainer {
-        position: absolute;
+    position: absolute;
     z-index: -2;
     top: 0px;
     left: -46px;
     rotate: 0deg;
-    /* transform: scaleY(1); */
     width: 371px;
     height: 158%;
-    img{
+
+    img {
         height: 100%;
         width: 100%;
     }
 }
 
 .scrollUp {
-   position: absolute;
-   right: 5%;
-   bottom: 45px;
+    position: absolute;
+    right: 5%;
+    bottom: 45px;
     cursor: pointer;
     width: 24px;
+
     &:hover {
         transform: scale(1.1);
         content: url(./../../../assets/img/contact/gouphover.png);

@@ -9,6 +9,7 @@ import { LanguagesService } from '../languages.service';
   templateUrl: './data-protection.component.html',
   styleUrl: './data-protection.component.scss'
 })
+
 export class DataProtectionComponent {
 languagesService=inject(LanguagesService)
 }

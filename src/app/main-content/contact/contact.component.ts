@@ -14,7 +14,7 @@ import { HttpClient } from '@angular/common/http';
 export class ContactComponent {
   myForm: FormGroup;
   mailTest = true;
-http = inject(HttpClient)
+  http = inject(HttpClient)
 
 
   constructor(private fb: FormBuilder) {
@@ -25,8 +25,6 @@ http = inject(HttpClient)
       agreement: [false, Validators.requiredTrue],
     });
   }
-
-
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -44,7 +42,6 @@ http = inject(HttpClient)
       this.http.post(this.post.endPoint, this.post.body(this.myForm.value))
         .subscribe({
           next: (response) => {
-
             this.myForm.reset();
           },
           error: (error) => {
@@ -53,12 +50,9 @@ http = inject(HttpClient)
           complete: () => console.info('send post complete'),
         });
     } else if (this.myForm.valid && this.mailTest) {
-
       this.myForm.reset();
     }
   }
-
-
 
   get nameError() {
     const nameControl = this.myForm.get('name');
@@ -95,13 +89,10 @@ http = inject(HttpClient)
     return 'Please accept the privacy policy';
   }
 
-  
-
   scrollTo(section: string): void {
     const element = document.getElementById(section);
     if (element) {
       element.scrollIntoView();
-     
     }
   }
 }

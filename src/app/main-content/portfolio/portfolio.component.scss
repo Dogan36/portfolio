@@ -83,12 +83,14 @@
     width: 352px;
     height: 100%;
     overflow: hidden;
-@media (max-width:1200px) {
-    top: 1300px 
-}
-    img{
+
+    @media (max-width:1200px) {
+        top: 1300px
+    }
+
+    img {
         position: absolute;
-        left:30px;
+        left: 30px;
         rotate: 84deg;
     }
 }

@@ -6,13 +6,10 @@
     </div>
     <div class="contactContent">
         <div data-aos="fade-right" class="contactLeft">
-
             <h2 translate>Got a problem to solve?</h2>
             <p translate>Contact me through this form, I am interested in hearing you, knowing your ideas and
                 contributing to your projects with my work.</p>
             <div><span translate>Need a Frontend developer? </span> <span translate>Contact me!</span></div>
-
-
         </div>
         <form data-aos="fade-left" class="form" [formGroup]="myForm" (ngSubmit)="onSubmit(); false">
             <div class="formField">
@@ -30,7 +27,6 @@
                 </div>
                 <span class="error-message" *ngIf="myForm.get('name')?.touched && nameError">{{ nameError }}</span>
             </div>
-
 
             <div class="formField">
                 <div class="input-container">

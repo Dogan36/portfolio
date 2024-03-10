@@ -23,8 +23,6 @@ body {
   overflow-x: hidden;
 height: 100vh;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory; /* Scroll-Snap nur in der vertikalen Richtung aktivieren */
-  scroll-behavior: smooth;
   position: relative;
 margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -44,7 +42,6 @@ margin: 0;
   margin-bottom: 80px;
   scroll-snap-align: start;
     width: clamp(300px, 100vw, 1600px);
-    scroll-snap-align: start;
 overflow-x: clip;
 }
 

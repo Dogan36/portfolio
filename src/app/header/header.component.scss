@@ -1,42 +1,39 @@
 @import './../../styles.scss';
 
 $headerHeight: 100px;
-:host{
+
+:host {
   display: block;
   position: relative;
   height: 0px;
-
 }
+
 header {
   width: clamp(200px, 100vw, 1600px);
-
   position: fixed;
   top: 0;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
- 
   height: $headerHeight;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 5%;
   background-color: $backgroundcolor;
-
   z-index: 999;
 
- .logo {
+  .logo {
     height: 80px;
     cursor: pointer;
-    filter:drop-shadow(3px 2px 2px $purple);
+    filter: drop-shadow(3px 2px 2px $purple);
   }
-
-
 }
 
 .headerRight {
   display: flex;
   align-items: center;
   gap: 29px;
+
   a {
     text-decoration: none;
     font-weight: 400;
@@ -44,12 +41,15 @@ header {
     color: #fff;
     position: relative;
     cursor: pointer;
+
     @media (max-width:700px) {
       display: none;
     }
+
     &:hover {
       color: $purple;
     }
+
     &:after {
       content: "";
       position: absolute;
@@ -60,6 +60,7 @@ header {
       background-color: $purple;
       transition: width 0.2s ease-in; // Übergang für die Breite des Unterstrichs
     }
+
     &.active {
       &:after {
         width: 53px; // Setzt die Breite des Unterstrichs auf 100% bei aktiver Klasse
@@ -80,6 +81,7 @@ header {
     color: white;
     font-size: 23px;
     position: relative;
+
     &:hover {
       color: $purple;
     }
@@ -154,7 +156,6 @@ header {
   }
 }
 
-
 .headerMobile {
   position: absolute;
   overflow: hidden;
@@ -171,9 +172,7 @@ header {
 
   &.active {
     width: 100vw;
-
   }
-
 }
 
 .bodyNoScroll {
@@ -181,7 +180,7 @@ header {
 }
 
 .imgContainer {
-cursor: pointer;
+  cursor: pointer;
   position: relative;
   height: 45px;
   width: 45px;

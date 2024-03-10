@@ -12,8 +12,7 @@ import { NgxTranslateModule } from './translate/translate.module';
     
     languageList = [
       { code: 'en', label: 'English', imageSrc: '/assets/gbFlag.png' },
-      { code: 'de', label: 'Deutsch', imageSrc: '/assets/gerFlag.png' },
-      // Weitere Sprachen hinzufügen...
+      { code: 'de', label: 'Deutsch', imageSrc: '/assets/gerFlag.png' },.
     ];
     
     currentLanguage: string = "en";
@@ -25,7 +24,5 @@ import { NgxTranslateModule } from './translate/translate.module';
       
       this.translate.use(newLanguage);
       this.currentLanguage = newLanguage;
-    
-      console.log('currentLanguage', this.currentLanguage);
     }
   }

@@ -1,5 +1,4 @@
 import { ApplicationConfig } from '@angular/core';
-
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
@@ -11,8 +10,6 @@ import {
   InMemoryScrollingFeature,
   InMemoryScrollingOptions,
   provideRouter,
-  Route,
-  RouterLink,
   withInMemoryScrolling,
 } from '@angular/router';
 
@@ -26,13 +23,9 @@ const inMemoryScrollingFeature: InMemoryScrollingFeature =
   withInMemoryScrolling(scrollConfig);
 
 export const appConfig: ApplicationConfig = {
-
-
-  
   providers: [
     provideRouter(routes, inMemoryScrollingFeature),
     provideHttpClient(),
-    
     importProvidersFrom(
       TranslateModule.forRoot({
         loader: {
@@ -44,4 +37,4 @@ export const appConfig: ApplicationConfig = {
     ),
   ],
 };
-console.log(routes)
+

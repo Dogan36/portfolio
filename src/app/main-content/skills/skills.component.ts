@@ -61,7 +61,6 @@ export class SkillsComponent {
     if (element) {
       element.style.gap = '20px';
     }
-    console.log(`Mouse over ${skill.skill}`);
   }
 
   onMouseOut(event:Event, skill: { skill: any; }): void {
@@ -71,7 +70,6 @@ export class SkillsComponent {
     }
   }
   
-
   scrollTo(section: string): void {
     const element = document.getElementById(section);
     if (element) {

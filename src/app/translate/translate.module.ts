@@ -11,20 +11,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     '.json');
 }
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    HttpClientModule,
-    TranslateModule.forRoot({
-      defaultLanguage: 'en',
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient],
-      },
-    }),
-  ],
-  providers:[LanguagesService],
   exports: [TranslateModule],
 })
 export class NgxTranslateModule { }

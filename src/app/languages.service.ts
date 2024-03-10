@@ -18,7 +18,7 @@ import { NgxTranslateModule } from './translate/translate.module';
     
     currentLanguage: string = "en";
 
-    constructor(private translate: TranslateService) { }
+    constructor(private translate: TranslateService) {console.log('instanz of lang serv') }
     
     changeSiteLanguage(): void {
       const newLanguage = this.currentLanguage === "en" ? "de" : "en";

@@ -1,5 +1,5 @@
 {
-	"About Me": "Über mich",
+	"About me": "Über mich",
 	"Hello, nice to meet you! I'm Doğan, a German-speaking frontend developer based in Munich with experience in building web applications using JavaScript & Angular. I've worked on projects independently and within teams, always adhering to the principles of clean code.": "Hallo, angenehm, dich kennenzulernen! Mein Name ist Doğan, ein Frontend-Entwickler aus München, der sich auf die Erstellung von Webanwendungen mit JavaScript & Angular spezialisiert hat. Ich habe sowohl eigenständig als auch im Team Projekte umgesetzt, stets mit einem Fokus auf sauberen Code.",
 	"The breadth of possibilities in programming captivates me. Building projects from the ground up and experiencing the sense of accomplishment upon completion are aspects I truly enjoy. I am currently on the lookout for an opportunity to demonstrate my skills as a junior frontend developer.": "Die Vielfalt der Möglichkeiten in der Programmierung fasziniert mich. Das Erschaffen von Projekten von Grund auf und das Gefühl der Erfüllung nach ihrer Fertigstellung gehören zu meinen bevorzugten Aspekten. Aktuell bin ich auf der Suche nach einer Gelegenheit, meine Fähigkeiten als Junior Frontend-Entwickler unter Beweis zu stellen.",
 	"I am thrilled to have discovered my place in the programming world, and now I am eager to become a part of a fantastic team. My aim is continuous learning and growth. I am highly motivated and excited to overcome new challenges and learn from them every day.": "Es freut mich sehr, meinen Platz in der Welt der Programmierung gefunden zu haben, und nun bin ich gespannt darauf, Teil eines fantastischen Teams zu werden. Mein Ziel ist kontinuierliches Lernen und Wachsen. Ich bin hochmotiviert und freue mich darauf, neue Herausforderungen anzunehmen und täglich daraus zu lernen.",
@@ -14,7 +14,7 @@
 	"Send Message :)": "Senden :)",
 	"Thank You :)": "Danke :)",
 	"Legal Notice": "Impressum",
-	"About me": "Über mich",
+	
 	"Skills": "Fähigkeiten",
 	"I am": "Ich bin",
 	"FRONTEND DEVELOPER": "FRONTEND ENTWICKLER",

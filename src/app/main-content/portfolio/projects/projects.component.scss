@@ -4,14 +4,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: clamp(200px, 100vw, 1600px)
+    width: clamp(200px, 100vw, 1600px);
+    overflow: hidden;
 }
 
 .project {
     display: flex;
     width: 100%;
     height: 339px;
-
+   scroll-snap-align: start;
     justify-content: space-around;
 
     @media (max-width:1200px) {

@@ -19,7 +19,7 @@ html{
 }
 
 body {
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
 height: 100vh;
   overflow-y: scroll;
@@ -43,6 +43,7 @@ margin: 0;
   padding: 100px 5vw 20px;
   scroll-snap-align: start;
     width: clamp(300px, 100vw, 1600px);
+    scroll-snap-align: start;
 
 }
 

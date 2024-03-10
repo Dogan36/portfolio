@@ -32,6 +32,7 @@ overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: start;
+    overflow: hidden;
 
     @media (max-width: 1200px) {
         flex-direction: column;

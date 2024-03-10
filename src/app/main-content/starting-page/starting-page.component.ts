@@ -15,9 +15,13 @@ import { LanguagesService } from '../../languages.service';
   styleUrl: './starting-page.component.scss'
 })
 export class StartingPageComponent{
+ 
   constructor() {AOS.init();}
+
 languagesService = inject(LanguagesService)
-  scrollTo(section: string): void {
+  
+scrollTo(section: string): void {
+
     const element = document.getElementById(section);
     if (element) {
       element.scrollIntoView();

@@ -6,10 +6,15 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
+    overflow: hidden;
     @media (max-width: 1200px) {
         flex-direction: column-reverse;
         gap:57px
     }
+}
+
+.skillsContainer{
+    overflow: hidden;
 }
 
 .contentRight {
@@ -19,7 +24,7 @@
   flex-direction: column;
   gap: 57px;
   position: relative;
-
+overflow: hidden;
   @media (max-width:1200px) {
     width: 100%;
     p{

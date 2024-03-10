@@ -5,12 +5,14 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
+    overflow-x: clip;
 }
 
 .aboutMeContent {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .contentLeft {

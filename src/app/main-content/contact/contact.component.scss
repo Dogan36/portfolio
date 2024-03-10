@@ -5,8 +5,9 @@ position: relative;
     display: flex;
     flex-direction: column;
     gap: 85px;
-overflow: hidden;
 
+overflow-y: hidden;
+margin-bottom: 0 !important;
 }
 
 .sectionHeader {
@@ -32,7 +33,7 @@ overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: start;
-    overflow: hidden;
+    
 
     @media (max-width: 1200px) {
         flex-direction: column;

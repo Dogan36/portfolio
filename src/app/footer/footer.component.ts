@@ -1,12 +1,12 @@
 import { Component, Renderer2, ElementRef } from '@angular/core';
 import { NgxTranslateModule } from '../translate/translate.module';
-
+import { RouterLink } from '@angular/router';
 
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [NgxTranslateModule],
+  imports: [NgxTranslateModule, RouterLink],
   animations: [],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'

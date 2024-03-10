@@ -41,10 +41,11 @@ margin: 0;
 .content {
   width: 100% ;
   padding: 100px 5vw 20px;
+  margin-bottom: 80px;
   scroll-snap-align: start;
     width: clamp(300px, 100vw, 1600px);
     scroll-snap-align: start;
-
+overflow-x: clip;
 }
 
 

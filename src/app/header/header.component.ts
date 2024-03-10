@@ -2,6 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LanguagesService } from '../languages.service';
 import { NgxTranslateModule } from '../translate/translate.module';
+import { Router } from '@angular/router';
 
 import { RouterLink } from '@angular/router';
 @Component({
@@ -20,7 +21,8 @@ export class HeaderComponent {
 
   burgerMenuOpen: boolean = false
 
-  constructor(public languagesService: LanguagesService) {
+
+  constructor(public languagesService: LanguagesService, public router: Router) {
    
    }
 

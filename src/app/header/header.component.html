@@ -1,7 +1,10 @@
 <header  #header>
-  <img (click)="scrollTo('startingPage')" class="logo" src="assets/img/logo/logoSmall.png" width="85.6" height="80" alt="Logo" >
+
+  <img routerLink="/" (click)="scrollTo('startingPage')" class="logo" src="assets/img/logo/logoSmall.png" width="85.6" height="80" alt="Logo" >
   <div class="headerRight">
-    <a (click)="scrollTo('aboutMe')" [ngClass]="{ 'active': activeSection === 'aboutMe' }" translate>About me</a>
+    
+    @if(router.url !== '/data'){
+    <a  (click)="scrollTo('aboutMe')" [ngClass]="{ 'active': activeSection === 'aboutMe' }" translate>About me</a>
     <a (click)="scrollTo('skills')" [ngClass]="{ 'active': activeSection === 'skills' }" translate>Skills</a>
     <a (click)="scrollTo('portfolio')" [ngClass]="{ 'active': activeSection === 'portfolio' }" translate>Portfolio</a>
 
@@ -10,7 +13,7 @@
       <b></b>
       <b></b>
     </div>
-
+    }
 
     <!-- Weitere Links hinzufügen -->
     <div class="imgContainer" (click)="languagesService.changeSiteLanguage()">

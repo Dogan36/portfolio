@@ -1,0 +1,12 @@
+@import './../../styles.scss';
+.datacontent{
+    display: flex;
+    flex-direction: column;
+    gap:20px
+
+   
+}
+
+h2, ul, h4{
+    color: white;
+}

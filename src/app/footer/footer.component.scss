@@ -103,7 +103,11 @@ transition: all 125ms;
             position:absolute;
             top: 44px;
             right: 44px;
-
+            
+            @media (max-width:700px) {
+                top: 25px;
+                right: 25px;  
+            }
         }
     
 }

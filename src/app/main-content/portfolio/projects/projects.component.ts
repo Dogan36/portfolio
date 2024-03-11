@@ -29,7 +29,7 @@ export class ProjectsComponent {
     },
     {
       name: "Ring of Fire",
-      link: "https://dogan-celik.developerakademie.net/ringoffire/",
+      link: "https://fire-4334c.web.app/",
       githublink: "https://github.com/Dogan36/ringoffire",
       stack: ["HTML", "CSS", "JavaScript", "Firebase"],
       description: "An online card drinking game for entertaining hours with friends. Developed with Firebase for seamless interactions.",

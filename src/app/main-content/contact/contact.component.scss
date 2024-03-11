@@ -204,6 +204,8 @@
     }
 }
 
+
+
 .custom-checkbox input {
     position: absolute;
     width: 20px;
@@ -267,4 +269,34 @@ input:-internal-autofill-selected {
         transform: scale(1.1);
         content: url(./../../../assets/img/contact/gouphover.png);
     }
+}
+
+.confirmationOverlay{
+    position: absolute;
+    background-color: rgba(20, 29, 47, 0.8);
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+}
+
+.confirmation{
+    border-style: unset;
+    width: 260px;
+    height: 58px;
+    border-radius: 10px;
+    background-color: #4B47FF;
+    font-size: 23px;
+    color: white;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+    position: absolute;
+   bottom: 20%;
+   left: calc(50% - 130px);
+
+    z-index: 10000;
 }

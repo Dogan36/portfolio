@@ -6,5 +6,4 @@ import { DataProtectionComponent } from './data-protection/data-protection.compo
 export const routes: Routes = [
 { path: '', component: MainContentComponent },
 { path: 'data', component: DataProtectionComponent },
-
 ];

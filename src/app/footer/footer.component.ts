@@ -15,7 +15,7 @@ export class FooterComponent {
   constructor(
     private renderer: Renderer2,
     private el: ElementRef,
-    ) {}
+  ) { }
 
 
   toggleImpressum() {
@@ -34,7 +34,7 @@ export class FooterComponent {
   scrollTo(section: string): void {
     const element = document.getElementById(section);
     if (element) {
-      element.scrollIntoView(); 
+      element.scrollIntoView();
     }
   }
 }

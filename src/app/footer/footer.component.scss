@@ -1,52 +1,58 @@
 @import './../../styles.scss';
 
-.footer{
+.footer {
     position: relative;
     border-top: 4px solid $purple;
     height: 290px;
     display: flex;
-   flex-direction: column;
+    flex-direction: column;
+
     @media (max-width: 650px) {
-        height: 380px;        
+        height: 380px;
     }
 }
 
-.footerContent{
-  
+.footerContent {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     @media (max-width: 650px) {
-        flex-direction: column;  
+        flex-direction: column;
         gap: 35px
-              
     }
 }
 
-.footerLeft{
+.footerLeft {
     display: flex;
     align-items: center;
     flex-direction: column;
-img{
-    height: 50px;
-    cursor: pointer;
-    filter:drop-shadow(3px 2px 2px $purple);
-};
-    span{
+
+    img {
+        height: 50px;
+        cursor: pointer;
+        filter: drop-shadow(3px 2px 2px $purple);
+    }
+
+    ;
+
+    span {
         cursor: pointer;
         color: white;
         font-size: 16px;
-        &:hover{
+
+        &:hover {
             color: $purple
         }
+
         @media (max-width: 650px) {
             position: absolute;
-            top:320px 
+            top: 320px
         }
     }
 }
 
-.footerMiddle{
+.footerMiddle {
     font-size: 23px;
     color: white;
 }
@@ -66,7 +72,7 @@ img{
     img {
         height: 30px;
         transition: all 125ms;
-        filter:drop-shadow(2px 1px 2px $purple);
+        filter: drop-shadow(2px 1px 2px $purple);
 
         &:hover {
             height: 40px;
@@ -74,45 +80,47 @@ img{
     }
 }
 
-.impressum{
-   overflow: hidden;
+.impressum {
+    overflow: hidden;
     position: absolute;
-    left:0;
+    left: 0;
     height: calc(100vh - 100px - 290px);
     width: clamp(200px, 100vw, 1600px);
     padding: 100px 5vw;
     bottom: 290px;
-background-color: $backgroundcolor;
+    background-color: $backgroundcolor;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: space-around;
-transition: all 125ms;
+    transition: all 125ms;
+
     @media (max-width:650px) {
         height: calc(100vh - 100px - 380px);
         bottom: 380px;
     }
-    
-        span, h2, a{
-            color:white;
-            text-decoration: none;
-        }
 
-        img{
-            cursor: pointer;
-            position:absolute;
-            top: 44px;
-            right: 44px;
-            
-            @media (max-width:700px) {
-                top: 25px;
-                right: 25px;  
-            }
+    span,
+    h2,
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    img {
+        cursor: pointer;
+        position: absolute;
+        top: 44px;
+        right: 44px;
+
+        @media (max-width:700px) {
+            top: 25px;
+            right: 25px;
         }
-    
+    }
 }
 
-.closed{
+.closed {
     height: 0;
     padding-top: 0;
     padding-bottom: 0;

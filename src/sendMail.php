@@ -2,12 +2,17 @@
 
 switch ($_SERVER['REQUEST_METHOD']) {
     case ("OPTIONS"): //Allow preflighting to take place.
-        header("Access-Control-Allow-Origin: *");
-        header("Access-Control-Allow-Methods: POST");
+        header("Access-Control-Allow-Origin: *,
+        https://dogan-celik.com,
+        http://dogan-celik.com");
+        header("Access-Control-Allow-Methods: GET, POST, OPTIONS, DELETE, PUT");
         header("Access-Control-Allow-Headers: content-type");
         exit;
         case("POST"): //Send the email;
-            header("Access-Control-Allow-Origin: *");
+            header("Access-Control-Allow-Origin: *,
+            https://dogan-celik.com,
+            http://dogan-celik.com,
+            ");
             // Payload is not send to $_POST Variable,
             // is send to php:input as a text
             $json = file_get_contents('php://input');

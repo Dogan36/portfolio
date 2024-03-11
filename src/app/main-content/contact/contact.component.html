@@ -84,7 +84,11 @@
         <img src="assets/img/shadows/shadow10.png" alt="">
 
     </div>
-
+ 
     <img class="scrollUp" (click)="scrollTo('startingPage')" src="assets/img/contact/goup.png" alt="Scroll up">
-
+    
+    @if(this.isVisibile){
+    <div class="confirmationOverlay"></div>
+    <div data-aos="fade-up" class="confirmation" translate>E-mail has been sent</div>
+}
 </section>

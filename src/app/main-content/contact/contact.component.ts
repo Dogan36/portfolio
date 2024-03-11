@@ -1,9 +1,10 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Renderer2, ElementRef } from '@angular/core';
 import { NgxTranslateModule } from '../../translate/translate.module';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { NgIf, NgClass } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'app-contact',
   standalone: true,
@@ -11,13 +12,15 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
+
 export class ContactComponent {
   myForm: FormGroup;
-  mailTest = true;
+  mailTest = false;
   http = inject(HttpClient)
+  isVisibile: boolean = false
 
-
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private renderer: Renderer2,
+    private el: ElementRef,) {
     this.myForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -27,13 +30,14 @@ export class ContactComponent {
   }
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://dogan-celik.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
+
     options: {
       headers: {
         'Content-Type': 'text/plain',
-        responseType: 'text',
       },
+      responseType: 'text',
     },
   };
 
@@ -47,10 +51,9 @@ export class ContactComponent {
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => this.showConfirmation()
+
         });
-    } else if (this.myForm.valid && this.mailTest) {
-      this.myForm.reset();
     }
   }
 
@@ -94,5 +97,14 @@ export class ContactComponent {
     if (element) {
       element.scrollIntoView();
     }
+  }
+
+  showConfirmation() {
+    this.isVisibile = true;
+    this.renderer.setStyle(document.body, 'overflow', 'hidden');
+    setTimeout(() => {
+      this.isVisibile = false
+      this.renderer.removeStyle(document.body, 'overflow');
+    }, 3000);
   }
 }

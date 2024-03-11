@@ -32,7 +32,11 @@
 	"privacy policy": "privacy policy ",
 	"and I agree to the processing of my data as outlined.": "and I agree to the processing of my data as outlined.",
 	"Imprint": "Imprint",
-	"E-mail has been sent":"E-mail has been sent"
+	"E-mail has been sent": "E-mail has been sent",
+	"Your name is required": "Your name is required.",
+	"Your email is required" :"Your email is required",
+	"Invalid email format": "Invalid email format",
+	"Your message is empty": "Your message is empty"
 	
 	
 }

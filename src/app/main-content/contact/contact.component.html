@@ -25,7 +25,7 @@
                             src="assets/img/contact/done.png" alt="Checked">
                     </div>
                 </div>
-                <span class="error-message" *ngIf="myForm.get('name')?.touched && nameError">{{ nameError }}</span>
+                <span class="error-message" *ngIf="myForm.get('name')?.touched && nameError" translate>{{ nameError }}</span>
             </div>
 
             <div class="formField">
@@ -40,7 +40,7 @@
                             src="assets/img/contact/done.png" alt="Checked">
                     </div>
                 </div>
-                <span class="error-message" *ngIf="myForm.get('email')?.touched && emailError">{{ emailError }}</span>
+                <span class="error-message" *ngIf="myForm.get('email')?.touched && emailError" translate>{{ emailError }}</span>
             </div>
 
             <div class="formField">
@@ -58,7 +58,7 @@
                             src="assets/img/contact/done.png" alt="Checked">
                     </div>
                 </div>
-                <span class="error-message" *ngIf="myForm.get('message')?.touched && messageError">{{ messageError
+                <span class="error-message" *ngIf="myForm.get('message')?.touched && messageError" translate>{{ messageError
                     }}</span>
             </div>
 
@@ -72,7 +72,7 @@
                         agree to the processing of my data as outlined.</span>
                 </div>
                 <span class="error-message"
-                    *ngIf="myForm.get('agreement')?.touched && myForm.get('agreement')?.hasError('required')">{{
+                    *ngIf="myForm.get('agreement')?.touched && myForm.get('agreement')?.hasError('required')" translate>{{
                     agreementError }}</span>
             </div>
 

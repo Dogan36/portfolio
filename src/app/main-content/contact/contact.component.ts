@@ -60,7 +60,7 @@ export class ContactComponent {
   get nameError() {
     const nameControl = this.myForm.get('name');
     if (nameControl?.hasError('required')) {
-      return 'Your name is required.';
+      return 'Your name is required';
     }
     return '';
   }
@@ -68,10 +68,10 @@ export class ContactComponent {
   get emailError() {
     const emailControl = this.myForm.get('email');
     if (emailControl?.hasError('required')) {
-      return 'Your email is required.';
+      return 'Your email is required';
     }
     if (emailControl?.hasError('email')) {
-      return 'Invalid email format.';
+      return 'Invalid email format';
     }
     return '';
   }

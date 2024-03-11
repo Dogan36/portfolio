@@ -34,5 +34,10 @@
 	"privacy policy": "Datenschuterklärung ",
 	"and I agree to the processing of my data as outlined.": "gelesen und bin mit der Verarbeitung meiner Daten wie beschrieben einverstanden.",
 	"Imprint": "Impressum",
-	"E-mail has been sent":"Email wurde versendet"
+	"E-mail has been sent":"Email wurde versendet",
+
+"Your name is required": "Ihr Name ist erforderlich.",
+"Your email is required": "Ihre E-Mail ist erforderlich",
+"Invalid email format": "Ungültiges E-Mail-Format",
+"Your message is empty": "Ihre Nachricht ist leer"
 }

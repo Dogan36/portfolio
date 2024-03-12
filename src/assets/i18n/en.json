@@ -11,7 +11,7 @@
 	"Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.": "Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.",
 	"Need a Frontend developer?": "Need a Frontend developer?",
 	"Contact me!": "Contact me!",
-	"Send Message :)": "Send Message :)",
+	"Send Message :)": "Send Message",
 	"Thank You :)": "Thank You :)",
 	"Legal Notice": "Legal Notice",
 	"Skills": "Skills",
@@ -36,7 +36,8 @@
 	"Your name is required": "Your name is required.",
 	"Your email is required" :"Your email is required",
 	"Invalid email format": "Invalid email format",
-	"Your message is empty": "Your message is empty"
+	"Your message is empty": "Your message is empty",	
+	"Information according to § 5 TMG (German Telemedia Act)": "Information according to § 5 TM (German Telemedia Act)"
 	
 	
 }

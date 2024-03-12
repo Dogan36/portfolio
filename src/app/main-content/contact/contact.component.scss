@@ -6,7 +6,11 @@
     flex-direction: column;
     gap: 85px;
     overflow-y: hidden;
-    margin-bottom: 0 !important;
+    padding: 100px 5vw 20px;
+  @media (max-width: 800px) {
+    padding: 40px 5vw 40px;
+
+  }
 }
 
 .sectionHeader {

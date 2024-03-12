@@ -1,10 +1,7 @@
 import { Component, HostListener, inject } from '@angular/core';
 import { NgxTranslateModule } from '../../translate/translate.module';
 import AOS from 'aos';
-import { LanguagesService } from '../../languages.service';
-import { appConfig } from '../../app.config';
-import { AppComponent } from '../../app.component';
-import { TranslateCompiler } from '@ngx-translate/core';
+
 
 
 

@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { NgxTranslateModule } from '../translate/translate.module';
 import { LanguagesService } from '../languages.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-data-protection',
@@ -12,4 +13,8 @@ import { LanguagesService } from '../languages.service';
 
 export class DataProtectionComponent {
 languagesService=inject(LanguagesService)
+constructor(private  titleService: Title){
+ this.titleService.setTitle("Dogan Celik | Privacy Policy")
+}
+
 }

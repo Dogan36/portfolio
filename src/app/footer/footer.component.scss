@@ -6,10 +6,11 @@
     height: 290px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    padding: 0 5vw;
 
-    @media (max-width: 650px) {
-        height: 380px;
-    }
+ 
+  
 }
 
 .footerContent {
@@ -36,20 +37,7 @@
 
     ;
 
-    span {
-        cursor: pointer;
-        color: white;
-        font-size: 16px;
 
-        &:hover {
-            color: $purple
-        }
-
-        @media (max-width: 650px) {
-            position: absolute;
-            top: 320px
-        }
-    }
 }
 
 .footerMiddle {
@@ -80,48 +68,30 @@
     }
 }
 
-.impressum {
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    height: calc(100vh - 100px - 290px);
-    width: clamp(200px, 100vw, 1600px);
-    padding: 100px 5vw;
-    bottom: 290px;
-    background-color: $backgroundcolor;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: space-around;
-    transition: all 125ms;
+.imprint {
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
 
-    @media (max-width:650px) {
-        height: calc(100vh - 100px - 380px);
-        bottom: 380px;
+    display: none;
+     &:hover {
+        color: $purple
     }
 
-    span,
-    h2,
-    a {
-        color: white;
-        text-decoration: none;
-    }
-
-    img {
-        cursor: pointer;
+    @media (max-width: 650px) {
         position: absolute;
-        top: 44px;
-        right: 44px;
-
-        @media (max-width:700px) {
-            top: 25px;
-            right: 25px;
-        }
+        top: 320px
     }
 }
 
-.closed {
-    height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+.imprintMobile {
+    @media (max-width: 650px) {
+        display: block !important
+    }
+}
+
+.imprintDesktop {
+    @media (min-width: 650px) {
+        display: block !important
+    }
 }

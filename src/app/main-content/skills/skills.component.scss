@@ -6,7 +6,11 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-   
+    padding: 100px 5vw 20px;
+    @media (max-width: 800px) {
+      padding: 40px 5vw 40px;
+  
+    }
     @media (max-width: 1200px) {
         flex-direction: column;
         gap:57px

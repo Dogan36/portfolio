@@ -1,7 +1,7 @@
 import { Component, Renderer2, ElementRef } from '@angular/core';
 import { NgxTranslateModule } from '../translate/translate.module';
 import { RouterLink } from '@angular/router';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-footer',
   standalone: true,
@@ -15,6 +15,7 @@ export class FooterComponent {
   constructor(
     private renderer: Renderer2,
     private el: ElementRef,
+    public router: Router
   ) { }
 
 

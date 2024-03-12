@@ -7,7 +7,11 @@
     justify-content: center;
     position: relative;
     gap: 35px;
-
+    padding: 100px 5vw 20px;
+    @media (max-width: 800px) {
+      padding: 20px 5vw 40px;
+  
+    }
     p {
         text-align: center;
     }
@@ -85,7 +89,7 @@
     overflow: hidden;
 
     @media (max-width:1200px) {
-        top: 1300px
+        top: 1280px
     }
 
     img {

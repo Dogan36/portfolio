@@ -7,11 +7,11 @@
 	"Your email": "Deine E-Mail",
 	"Your message": "Deine Nachricht",
 	"Contact": "Kontakt",
-	"Got a problem to solve?": "Ein Problem zu lösen?",
+	"Got a problem to solve?": "Gilt es ein Problem zu lösen?",
 	"Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.": "Kontaktiere mich über dieses Formular. Ich freue mich darauf, von dir zu hören, deine Ideen kennenzulernen und mit meiner Arbeit zu deinen Projekten beizutragen.",
 	"Need a Frontend developer?": "Brauchst du einen Frontend-Entwickler?",
 	"Contact me!": "Kontaktiere mich!",
-	"Send Message :)": "Senden :)",
+	"Send Message :)": "Senden",
 	"Thank You :)": "Danke :)",
 	"Legal Notice": "Impressum",
 	
@@ -31,7 +31,7 @@
 	"As a graduate of the Developer Academy, I bring solid knowledge and skills in the field of web development. With a focus on modern technologies, I master the art of web development. My training emphasizes clean code, efficient collaboration, and continuous learning. Explore my projects and let's create amazing things together!": "Als Absolvent der Developer Akademie bringe ich fundierte Kenntnisse und Fähigkeiten im Bereich der Webentwicklung mit. Mit Schwerpunkt auf modernen Technologien beherrsche ich die Kunst der Webentwicklung. Meine Ausbildung legt Wert auf sauberen Code, effiziente Zusammenarbeit und kontinuierliches Lernen. Entdecke meine Projekte und lass uns zusammen großartige Dinge schaffen!",
 	"Get in touch": "Komm in Kontakt",
 	"I've read the": "Ich habe die ",
-	"privacy policy": "Datenschuterklärung ",
+	"privacy policy": "Datenschutzerklärung ",
 	"and I agree to the processing of my data as outlined.": "gelesen und bin mit der Verarbeitung meiner Daten wie beschrieben einverstanden.",
 	"Imprint": "Impressum",
 	"E-mail has been sent":"Email wurde versendet",
@@ -39,5 +39,6 @@
 "Your name is required": "Ihr Name ist erforderlich.",
 "Your email is required": "Ihre E-Mail ist erforderlich",
 "Invalid email format": "Ungültiges E-Mail-Format",
-"Your message is empty": "Ihre Nachricht ist leer"
+"Your message is empty": "Ihre Nachricht ist leer",
+"Information according to § 5 TMG (German Telemedia Act)": "Angaben gemäß § 5 TMG"
 }

@@ -31,13 +31,11 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background-color: $backgroundcolor;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-app-root {
-  position: absolute;
-  right: 50%;
-  transform: translate(50%);
-}
 
 .bodyNoScroll {
   overflow: hidden;

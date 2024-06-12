@@ -52,7 +52,6 @@ export class ContactComponent {
             console.error(error);
           },
           complete: () => this.showConfirmation()
-
         });
     }
   }

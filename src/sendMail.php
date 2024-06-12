@@ -22,6 +22,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $email = $params->email;
             $name = $params->name;
             $message = $params->message;
+            
     
             $recipient = 'mail@dogan-celik.com';  
             $subject = "Contact From <$email>";

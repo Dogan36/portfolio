@@ -13,7 +13,7 @@ export class ProjectsComponent {
   projects = [
     {
       name: "Join",
-      link: "https://dogan-celik.developerakademie.net/join/login",
+      link: "https://join.dogan-celik.com/login.html",
       githublink: "https://github.com/Dogan36/join",
       stack: ["HTML", "CSS", "JavaScript"],
       description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",

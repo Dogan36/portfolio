@@ -40,5 +40,6 @@
 "Your email is required": "Ihre E-Mail ist erforderlich",
 "Invalid email format": "Ungültiges E-Mail-Format",
 "Your message is empty": "Ihre Nachricht ist leer",
-"Information according to § 5 TMG (German Telemedia Act)": "Angaben gemäß § 5 TMG"
+"Information according to § 5 TMG (German Telemedia Act)": "Angaben gemäß § 5 TMG",
+"A dynamic Q&A platform for community discussions and knowledge sharing, with account creation, built with Angular and Firebase.": "Eine dynamische Q&A-Plattform für Community-Diskussionen und Wissensaustausch mit Accounterstellung, entwickelt mit Angular und Firebase."
 }

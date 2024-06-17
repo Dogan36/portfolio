@@ -12,6 +12,14 @@ import { NgxTranslateModule } from '../../../translate/translate.module';
 export class ProjectsComponent {
   projects = [
     {
+      name: "DABubble",
+      link: "https://dabubble.dogan-celik.com",
+      githublink: "https://github.com/Dogan36/dabubble",
+      stack: ["Angular", "TypeScript", "Material Design", "Firebase"],
+      description: "A dynamic Q&A platform for community discussions and knowledge sharing, with account creation, built with Angular and Firebase.",
+      imgname: "dabubble",
+    },
+    {
       name: "Join",
       link: "https://join.dogan-celik.com/login.html",
       githublink: "https://github.com/Dogan36/join",

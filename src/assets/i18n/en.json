@@ -37,7 +37,8 @@
 	"Your email is required" :"Your email is required",
 	"Invalid email format": "Invalid email format",
 	"Your message is empty": "Your message is empty",	
-	"Information according to § 5 TMG (German Telemedia Act)": "Information according to § 5 TM (German Telemedia Act)"
+	"Information according to § 5 TMG (German Telemedia Act)": "Information according to § 5 TM (German Telemedia Act)",
+	"A dynamic Q&A platform for community discussions and knowledge sharing, with account creation, built with Angular and Firebase.": "A dynamic Q&A platform for community discussions and knowledge sharing, with account creation, built with Angular and Firebase."
 	
 	
 }

@@ -13,8 +13,10 @@ import { LanguagesService } from '../../languages.service';
 })
 export class StartingPageComponent {
 
-  constructor() { AOS.init(); }
-
+  constructor() {}
+  ngOnInit() {
+  
+  }
   languagesService = inject(LanguagesService)
 
   scrollTo(section: string): void {

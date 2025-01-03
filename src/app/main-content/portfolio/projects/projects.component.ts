@@ -35,22 +35,6 @@ export class ProjectsComponent {
       description: "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
       imgname: "elpolloloco"
     },
-    {
-      name: "Ring of Fire",
-      link: "https://fire-4334c.web.app/",
-      githublink: "https://github.com/Dogan36/ringoffire",
-      stack: ["HTML", "CSS", "JavaScript", "Firebase"],
-      description: "An online card drinking game for entertaining hours with friends. Developed with Firebase for seamless interactions.",
-      imgname: "ringoffire",
-    },
-
-    {
-      name: "Pokedex",
-      link: "https://dogan-celik.developerakademie.net/pokedex/index.html",
-      githublink: "https://github.com/Dogan36/Pokedex",
-      stack: ["HTML", "CSS", "JavaScript", "Api"],
-      description: "Based on the PokeAPI a simple library that provides and catalogues pokemon information.",
-      imgname: "pokedex"
-    },
+    
   ]
 }

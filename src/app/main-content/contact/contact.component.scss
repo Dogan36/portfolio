@@ -186,6 +186,7 @@
     transition: transform 0.8s;
     transform-style: preserve-3d;
     backface-visibility: hidden;
+    border-radius: 50%;
 }
 
 .imgContainer .flipped {

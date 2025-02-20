@@ -17,6 +17,10 @@ export class SkillsComponent {
       img: "assets/img/skills/angular.png",
     },
     {
+      skill: "Vue",
+      img: "assets/img/skills/vue-logo.png",
+    },
+    {
       skill: "TypeScript",
       img: "assets/img/skills/typescript.png",
     },
@@ -25,9 +29,19 @@ export class SkillsComponent {
       img: "assets/img/skills/javascript.png",
     },
     {
+      skill: "Python",
+      img: "assets/img/skills/python-logo.png",
+    },
+    {
     skill: "HTML",
       img: "assets/img/skills/html.png",
     },
+    {
+      skill: "Django",
+      img: "assets/img/skills/django-logo.svg",
+    },
+    {skill : "PostgreSQL",
+      img: "assets/img/skills/postgresql-logo.png",},
     {
       skill: "Firebase",
       img: "assets/img/skills/firebase.png",

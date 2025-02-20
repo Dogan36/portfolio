@@ -21,10 +21,10 @@ export class ProjectsComponent {
     },
     {
       name: "Join",
-      link: "https://join.dogan-celik.com/login.html",
-      githublink: "https://github.com/Dogan36/join",
-      stack: ["HTML", "CSS", "JavaScript"],
-      description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+      link: "https://join.dogan-celik.com",
+      githublink: "https://github.com/Dogan36/join_v2_frontend",
+      stack: ["Vue", "CSS", "Django Rest Framework", "PostgreSQL"],
+      description: "Task manager inspired by the Kanban System. Create and organize tasks in different workspaces using drag and drop functions, assign users and categories.",
       imgname: "join",
     },
     {

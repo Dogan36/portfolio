@@ -37,9 +37,29 @@ export class ContactComponent {
       headers: {
         'Content-Type': 'text/plain',
       },
-      responseType: 'text',
+      responseType: 'text' as const,
     },
   };
+
+  ngOnInit() {
+        
+    // Anfrage senden
+    const payload = {
+      subject: 'Portfolio Visit Notification',
+      to: 'mail@dogan-celik.com',
+      message: 'Portfolio wurde besucht',
+    };
+  
+    this.http.post(this.post.endPoint, this.post.body(payload), this.post.options)
+      .subscribe({
+        next: (response) => {
+        },
+        error: (error) => {
+        }
+      });
+  }
+
+  
 
   onSubmit() {
     if (this.myForm.valid) {

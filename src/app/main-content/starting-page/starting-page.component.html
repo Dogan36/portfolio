@@ -1,39 +1,73 @@
 <section id="startingPage" class="startingPage content">
-    <div class="sectionContent">
-        <div class="mainContent">
-            <div class="picture">
-                <img src="assets/img/startingPage/picture.png" alt="">
-                <img src="assets/img/shadows/shadow1.png">
+  <div class="sectionContent">
+    <div class="mainContent">
+      <div class="picture">
+        <img src="assets/img/startingPage/picture.png" alt="" />
+        <img src="assets/img/shadows/shadow1.png" />
+      </div>
+      <div class="introduction">
+        <div class="iAm">
+          <div
+            data-aos="fade-left"
+            data-aos-delay="100"
+            class="iAmLeft"
+            [ngClass]="{
+              iAmLeftDE: this.languagesService.currentLanguage == 'de'
+            }"
+            translate
+          >
+            I am
+          </div>
+          <div class="iAmRight">
+            <h1 data-aos="fade-down" data-aos-delay="400" class="name">
+              Doğan Çelik
+            </h1>
+            <div data-aos="fade-up" data-aos-delay="800">
+              <span class="morphing-text">{{ currentJobTitle }}</span>
+              <span translate>DEVELOPER</span>
             </div>
-            <div class="introduction">
-                <div class="iAm">
-                    <div data-aos="fade-left" data-aos-delay="1500" class="iAmLeft" [ngClass]="{'iAmLeftDE':this.languagesService.currentLanguage == 'de'}" translate>I am
-                    </div>
-                    <div class="iAmRight">
-                        <h1 data-aos="fade-down" data-aos-delay="1500" class="name">Doğan Çelik</h1>
-                        <span data-aos="fade-up" data-aos-delay="1500" class="jobTitle" translate>FRONTEND DEVELOPER</span>
-                    </div>
-                </div>
-                <button data-aos="flip-down" data-aos-delay="2000" (click)="scrollTo('contact')" class="letsTalk">Let's
-                    talk!</button>
-            </div>
+          </div>
         </div>
-        <div class="sectionBottom">
-            <div data-aos="fade-right" data-aos-delay="1500" data-aos-offset="-400" class="reference">
-                <div class="line"></div>
-                <div class="icons">
-                    <a href="https://github.com/Dogan36" target="_blank"><img src="assets/img/startingPage/githubButton.png" alt=""></a>
-                    <a href="https://www.linkedin.com/in/do%C4%9Fan-%C3%A7elik-29a412235/" target="_blank"><img src="assets/img/startingPage/linkedInButton.png" alt=""></a>
-                    <a href="mailto:mail@dogan-celik.com"><img src="assets/img/startingPage/emailButton.png" alt=""></a>
-                </div>
-                <a class="mail" href="mail@dogan-celik.com">mail&#64;dogan-celik.com</a>
-            </div>
-            <div (click)="scrollTo('aboutMe')" class="scrollDown">
-                <img src="" alt="">
-                <span translate>Scroll down</span>
-            </div>
-        </div>
-        <img class="curtain2" src="assets/img/startingPage/curtain2.png" alt="">
+        <button
+          data-aos="flip-down"
+          data-aos-delay="1600"
+          (click)="scrollTo('contact')"
+          class="letsTalk"
+        >
+          Let's talk!
+        </button>
+      </div>
     </div>
-
+    <div class="sectionBottom">
+      <div
+        data-aos="fade-right"
+        data-aos-delay="1200"
+        data-aos-offset="-400"
+        class="reference"
+      >
+        <div class="line"></div>
+        <div class="icons">
+          <a href="https://github.com/Dogan36" target="_blank"
+            ><img src="assets/img/startingPage/githubButton.png" alt=""
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/do%C4%9Fan-%C3%A7elik-29a412235/"
+            target="_blank"
+            ><img src="assets/img/startingPage/linkedInButton.png" alt=""
+          /></a>
+          <a href="mailto:mail@dogan-celik.com"
+            ><img src="assets/img/startingPage/emailButton.png" alt=""
+          /></a>
+        </div>
+        <a class="mail" href="mailto:mail@dogan-celik.com"
+          >mail&#64;dogan-celik.com</a
+        >
+      </div>
+      <div (click)="scrollTo('aboutMe')" class="scrollDown">
+        <img src="" alt="" />
+        <span translate>Scroll down</span>
+      </div>
+    </div>
+    <img class="curtain2" src="assets/img/startingPage/curtain2.png" alt="" />
+  </div>
 </section>

@@ -117,9 +117,44 @@
 
     span:nth-child(2) {
         font-size: clamp(18px, 3.625vw, 58px);
-        color: $purple
+        color: $purple;
+    }
+    span:nth-child(1) {
+        font-size: clamp(18px, 3.625vw, 58px);
+        color: $blue;
     }
 }
+
+.morphing-text {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  animation: morph 3s infinite;
+}
+
+@keyframes morph {
+  0% {
+    opacity: 0;
+    filter: blur(20px);
+    transform: scale(1);
+  }
+  20% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1);
+  }
+  
+  80% {
+     opacity: 1;
+    filter: blur(0px);
+    transform: scale(1)}
+  100% {
+    opacity: 0;
+    filter: blur(20px);
+    transform: scale(1);
+  }
+}
+
 
 .letsTalk {
     border-style: unset;
@@ -211,6 +246,8 @@
     }
 }
 
+
+
 .scrollDown {
     display: flex;
     flex-direction: column-reverse;
@@ -218,9 +255,10 @@
     align-items: center;
     gap: 3px;
     cursor: pointer;
-
+    animation: pointdown 1s         infinite;
     @media (max-width:1000px) {
-        display: none;
+        span{display: none;}
+        
     }
 
     &:hover {
@@ -238,5 +276,17 @@
         content: url(./../../../assets/img/startingPage/arrowDown.svg);
         margin-left: -2px;
         width: 18px;
+    }
+}
+
+@keyframes pointdown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
     }
 }

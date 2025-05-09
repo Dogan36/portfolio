@@ -14,9 +14,16 @@ import { LanguagesService } from '../../languages.service';
 export class StartingPageComponent {
 
   constructor() {}
-  ngOnInit() {
-  
-  }
+  jobTitles = ['FRONTEND\u00A0', '\u00A0BACKEND\u00A0\u00A0', 'FULLSTACK'];
+currentJobTitle = this.jobTitles[0];
+currentIndex = 0;
+
+ngOnInit() {
+  setInterval(() => {
+    this.currentIndex = (this.currentIndex + 1) % this.jobTitles.length;
+    this.currentJobTitle = this.jobTitles[this.currentIndex];
+  }, 3000);
+}
   languagesService = inject(LanguagesService)
 
   scrollTo(section: string): void {

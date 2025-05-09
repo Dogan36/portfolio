@@ -50,13 +50,13 @@ export class ContactComponent {
       message: 'Portfolio wurde besucht',
     };
   
-    this.http.post(this.post.endPoint, this.post.body(payload), this.post.options)
-      .subscribe({
-        next: (response) => {
-        },
-        error: (error) => {
-        }
-      });
+    // this.http.post(this.post.endPoint, this.post.body(payload), this.post.options)
+    //   .subscribe({
+    //     next: (response) => {
+    //     },
+    //     error: (error) => {
+    //     }
+    //   });
   }
 
   

@@ -94,13 +94,14 @@
 
     img {
         height: 60px;
-      
+        border-radius: 7px;
     }
 
 
     span {
         font-size: 16px;
         color: white;
+        white-space: nowrap;
     }
 
 }

@@ -305,3 +305,16 @@ input:-internal-autofill-selected {
 
     z-index: 10000;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px $backgroundcolor inset !important;
+    box-shadow: 0 0 0px 1000px $backgroundcolor inset !important;
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;  // Trick für Chrome
+}

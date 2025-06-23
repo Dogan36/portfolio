@@ -17,7 +17,12 @@ export class AppComponent implements OnInit {
   isLoading = true;
 
   ngOnInit(): void {
-    // Wenn die App fertig initialisiert ist
-    this.isLoading = false;
+
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1000);
   }
+    
+  
+  
 }

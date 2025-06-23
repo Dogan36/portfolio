@@ -1,17 +1,17 @@
 <footer id="footer" class="footer content">
     <div class="footerContent">
         <div class="footerLeft">
-            <img routerLink="/" (click)="scrollTo('startingPage')" src="assets/img/logo/logoSmall.png" alt="">
+            <img routerLink="/" (click)="scrollTo('startingPage')" src="assets/img/logo/logoSmall.png" alt="Logo">
             @if(router.url !== '/imprint'){<span class="imprint  imprintDesktop" routerLink="/imprint/" translate>Imprint</span>}
         </div>
         <span class="footerMiddle">&#169; Doğan Çelik 2025</span>
         <div class="icons">
             <a href="https://github.com/Dogan36" target="_blank"><img
-                    src="assets/img/startingPage/githubButton.png" alt=""></a>
+                    src="assets/img/startingPage/githubButton.png" alt="Github"></a>
             <a href="https://www.linkedin.com/in/do%C4%9Fan-%C3%A7elik-29a412235/" target="_blank"><img
-                    src="assets/img/startingPage/linkedInButton.png" alt=""></a>
+                    src="assets/img/startingPage/linkedInButton.png" alt="LinkedIn"></a>
             <a href="mailto:mail@dogan-celik.com"><img src="assets/img/startingPage/emailButton.png"
-                    alt=""></a>
+                    alt="Mail"></a>
         </div>
         @if(router.url !== '/imprint'){<span class="imprint imprintMobile" routerLink="/imprint/" translate>Imprint</span>}
     </div>
